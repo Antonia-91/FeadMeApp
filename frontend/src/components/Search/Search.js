@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import {  NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 const Search = ({ logedin, setLogedin }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,7 +21,7 @@ const Search = ({ logedin, setLogedin }) => {
 
   /// add to fav
   const addFav = async (id) => {
-    //console.log(id)
+    console.log(id);
 
     let obj = {
       userId: logedin.user_id,
@@ -56,14 +55,15 @@ const Search = ({ logedin, setLogedin }) => {
     // console.log("logedin", logedin);
     // console.log("updateUserInfo", updateUserInfo);
     setUdatedFavs(join);
+    console.log(updateUserInfo);
     setLogedin(updateUserInfo);
   };
   // console.log(updatedFavs);
-   console.log(logedin);
+  console.log(logedin);
   //console.log(meals);
 
   return (
-    <div>
+    <main className="search-main">
       search Recepires{" "}
       <div className="search">
         <input
@@ -76,7 +76,7 @@ const Search = ({ logedin, setLogedin }) => {
       </div>
       <section>
         {meals.map((meal) => (
-          <article key={meal.idMeal}>
+          <article className="search-article" key={meal.idMeal}>
             <img src={meal.strMealThumb} alt="#" />
             <div>
               {/* <NavLink to={`/${meal.idMeal}`}>
@@ -89,7 +89,7 @@ const Search = ({ logedin, setLogedin }) => {
           </article>
         ))}
       </section>
-    </div>
+    </main>
   );
 };
 

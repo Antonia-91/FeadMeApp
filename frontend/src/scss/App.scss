@@ -3,6 +3,7 @@
 
 @import "../components/Navbar/Navbar";
 @import "../components/Home/Home.scss";
+@import "../components/Search/Search.scss";
 
 //@import "../src/backgroundImg/web.jpg";
 
@@ -45,6 +46,10 @@ body {
 
 button {
   background: $btn-background;
+}
+
+.hide {
+  display: none;
 }
 
 .bubbles img {

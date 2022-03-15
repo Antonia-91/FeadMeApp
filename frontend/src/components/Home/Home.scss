@@ -18,7 +18,7 @@
 }
 @media screen and (max-width: 1000px) {
   .home-header {
-    width: 60vh;
+    width: 60vw;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -29,7 +29,7 @@
 }
 @media screen and (max-width: 400px) {
   .home-header {
-    width: 60vh;
+    width: 60vw;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -40,7 +40,7 @@
 }
 
 .home-title {
-  width: 60vh;
+  // width: 60vh;
   display: flex;
   flex-direction: column;
   // margin: 0 2rem;

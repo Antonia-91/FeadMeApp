@@ -4,6 +4,8 @@ import dinner from "./images/brekker.jpg";
 import lunch from "./images/lunch.jpg";
 import brekker from "./images/dinner.jpg";
 
+import bubble from "./images/bubbla.png";
+
 const Home = () => {
   return (
     <section className="home">
@@ -60,6 +62,12 @@ const Home = () => {
             style={{ borderRadius: "20px" }}
           />
         </article>
+      </div>
+      <div className="bubbles">
+        <img src={bubble} alt="" />
+        <img src={bubble} alt="" />
+        <img src={bubble} alt="" />
+        <img src={bubble} alt="" />
       </div>
     </section>
   );
