@@ -1,0 +1,32 @@
+.home {
+  width: 100vw;
+  border: 1px solid black;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.category-wrapper {
+  display: flex;
+  width: fit-content;
+  flex-wrap: wrap;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-article {
+  margin: 1rem;
+  box-shadow: 10px 10px 5px #05050598;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
+// .category-article {
+//   background-image: url("/frontend/src/images/baking.jpg");
+//   height: 100px;
+// }
