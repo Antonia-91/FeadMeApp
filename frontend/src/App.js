@@ -10,6 +10,7 @@ import Search from "./components/Search/Search";
 import Shoppinglist from "./components/Shoppinglist/Shoppinglist";
 
 import "./css/App.css";
+import bubble from "./backgroundImg/bubbla.png";
 //import webImg from "./src/backgroundImg/Web 1920 – 2";
 //import webImg from "../src/backgroundImg/web.jpg";
 
@@ -83,6 +84,12 @@ function App() {
           </>
         </Routes>
       </Router>
+      <div className="bubbles">
+        <img src={bubble} alt="" />
+        <img src={bubble} alt="" />
+        <img src={bubble} alt="" />
+        <img src={bubble} alt="" />
+      </div>
     </div>
   );
 }

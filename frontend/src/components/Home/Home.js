@@ -8,12 +8,17 @@ const Home = () => {
   return (
     <section className="home">
       <header className="home-header">
-        <h3>Explore foods from around the globe.</h3>
-        <p>
-          Whether you're looking for healthy recipes, or ideas on how to use
-          leftovers from your fridge, we've numerous recipes to choose from, so
-          you'll be able to find the perfect dish.
-        </p>
+        <div className="home-title">
+          <h3>Explore foods from around the globe.</h3>
+          <p>
+            Whether you're looking for healthy recipes, or ideas on how to use
+            leftovers from your fridge, we've numerous recipes to choose from,
+            so you'll be able to find the perfect dish.
+          </p>
+        </div>
+        <div>
+          <button>Search Recepies </button>
+        </div>
       </header>
 
       <div className="category-wrapper">

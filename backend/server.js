@@ -6,6 +6,7 @@ const mysql = require("mysql2");
 
 /// Import routes
 const userRouter = require("./routes/user.js");
+const favoritesRouter = require("./routes/favorites.js");
 
 
 /// Enables CORS
@@ -25,6 +26,7 @@ app.use(
 
 /// use routes
 app.use(userRouter);
+app.use(favoritesRouter);
 
 
 /// connect to database

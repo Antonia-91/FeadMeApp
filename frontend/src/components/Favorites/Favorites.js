@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
-const Favorites = () => {
-  return (
-    <div>Favorites</div>
-  )
-}
+const Favorites = ({ logedin, setLogedin }) => {
+  console.log(logedin.user_favs);
 
-export default Favorites
+  return <div>Favorites</div>;
+};
+
+export default Favorites;
