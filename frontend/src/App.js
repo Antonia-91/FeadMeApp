@@ -1,15 +1,17 @@
 import React, { useState, useCallback, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DatePick from "./components/DatePick/DatePick";
-import Favorites from "./components/Favorites/Favorites"
-import Home from "./components/Home/Home"
-import Login from "./components/Login/Login"
-import Meal from "./components/Meal/Meal"
-import Navbar from "./components/Navbar/Navbar"
-import  Search  from "./components/Search/Search";
-import Shoppinglist from "./components/Shoppinglist/Shoppinglist"
+import Favorites from "./components/Favorites/Favorites";
+import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
+import Meal from "./components/Meal/Meal";
+import Navbar from "./components/Navbar/Navbar";
+import Search from "./components/Search/Search";
+import Shoppinglist from "./components/Shoppinglist/Shoppinglist";
 
 import "./css/App.css";
+//import webImg from "./src/backgroundImg/Web 1920 – 2";
+//import webImg from "../src/backgroundImg/web.jpg";
 
 function App() {
   const [user, setUser] = useState();
@@ -24,10 +26,9 @@ function App() {
     setLogedin(getUser);
   }, [user]);
 
-
   return (
     <div className="App">
-          <Router>
+      <Router>
         <Navbar logedin={logedin} setLogedin={setLogedin} />
         <Routes>
           <>
@@ -74,7 +75,6 @@ function App() {
                 }
               />
             )}
-            
 
             <Route
               path="/login"

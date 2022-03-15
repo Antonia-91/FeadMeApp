@@ -4,6 +4,8 @@
 @import "../components/Navbar/Navbar";
 @import "../components/Home/Home.scss";
 
+//@import "../src/backgroundImg/web.jpg";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +13,34 @@
 body {
   //background-color: $yellow;
   color: $primary-fontColor;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../backgroundImg/web.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1400px) {
+  .App {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../backgroundImg/ipad.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../backgroundImg/iphone.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 button {
