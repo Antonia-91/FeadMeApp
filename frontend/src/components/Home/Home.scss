@@ -7,7 +7,12 @@
   align-items: center;
   flex-direction: column;
 }
-
+.home-header {
+  width: 50vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .category-wrapper {
   display: flex;
   width: fit-content;
@@ -19,8 +24,9 @@
 
 .category-article {
   margin: 1rem;
-  box-shadow: 10px 10px 5px #05050598;
-  //border: 1px solid transparent;
+  box-shadow: 5px 5px 5px #05050598;
+  border: 1px solid transparent;
+  border-radius: 20px;
 
   &:hover {
     border: 1px solid black;

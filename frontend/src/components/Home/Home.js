@@ -7,22 +7,53 @@ import brekker from "./images/dinner.jpg";
 const Home = () => {
   return (
     <section className="home">
-      <h3>Home</h3>
+      <header className="home-header">
+        <h3>Explore foods from around the globe.</h3>
+        <p>
+          Whether you're looking for healthy recipes, or ideas on how to use
+          leftovers from your fridge, we've numerous recipes to choose from, so
+          you'll be able to find the perfect dish.
+        </p>
+      </header>
 
       <div className="category-wrapper">
         <article className="category-article">
-          <img src={brekker} width="200" height="200" alt="choklet" />
+          <img
+            src={brekker}
+            width="200"
+            height="200"
+            alt="choklet"
+            style={{ borderRadius: "20px" }}
+          />
         </article>
 
         <article className="category-article">
-          <img src={lunch} width="200" height="200" alt="choklet" />
+          <img
+            src={lunch}
+            width="200"
+            height="200"
+            alt="choklet"
+            style={{ borderRadius: "20px" }}
+          />
         </article>
         <article className="category-article">
-          <img src={dinner} width="200" height="200" alt="choklet" />
+          <img
+            src={dinner}
+            width="200"
+            height="200"
+            alt="choklet"
+            style={{ borderRadius: "20px" }}
+          />
         </article>
 
         <article className="category-article">
-          <img src={baking} width="200" height="200" alt="choklet" />
+          <img
+            src={baking}
+            width="200"
+            height="200"
+            alt="choklet"
+            style={{ borderRadius: "20px" }}
+          />
         </article>
       </div>
     </section>
