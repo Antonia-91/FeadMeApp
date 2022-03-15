@@ -8,9 +8,9 @@ const Navbar = ({ logedin, setLogedin }) => {
     setLogedin(null);
   };
   return (
-    <header>
+    <header className="header">
       <nav>
-        <h1>MealMeUp</h1>
+        <h1>FeadMeApp</h1>
         <ul>
           {logedin && <button onClick={logout}>logout</button>}
           {logedin && (
