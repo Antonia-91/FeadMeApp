@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Meals from "../Meals/Meals";
 
-const Search = ({ logedin, setLogedin }) => {
+const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [meals, setMeals] = useState([]);
   const [updatedFavs, setUdatedFavs] = useState();
@@ -36,7 +36,7 @@ const Search = ({ logedin, setLogedin }) => {
         <button onClick={fetchMealsHandler}>Search Meal</button>
       </div>
       <section>
-      <Meals meals={meals} logedin={logedin} setLogedin={setLogedin}/>
+      <Meals meals={meals} logedin={logedin} setLogedin={setLogedin} favorites={favorites} setFavorites={setFavorites}/>
         {/* {meals.map((meal) => (
           <article className="search-article" key={meal.idMeal}>
             <img src={meal.strMealThumb} alt={`${meal.strMeal}`} />

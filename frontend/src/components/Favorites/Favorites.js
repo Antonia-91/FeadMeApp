@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const Favorites = ({ logedin, setLogedin }) => {
+const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
   const [userId, setUserId] = useState();
-  const [favorites, setFavorites] = useState([]);
+  // const [favorites, setFavorites] = useState([]);
 
   console.log("favorites", favorites);
 
@@ -69,7 +69,6 @@ const Favorites = ({ logedin, setLogedin }) => {
     }
   };
 
-
   if (!Favorites) return null;
   return (
     <div>
@@ -86,7 +85,6 @@ const Favorites = ({ logedin, setLogedin }) => {
               id={fav.meals[0].idMeal}
               onClick={(e) => onRemoveFavorite(e.target.id)}
             >
-              {" "}
               Remove
             </button>
           </article>

@@ -18,6 +18,7 @@ function App() {
   const [user, setUser] = useState();
   const [logedin, setLogedin] = useState();
   const [todos, setTodos] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const getUser = localStorage.getItem("user")
@@ -39,7 +40,14 @@ function App() {
             {logedin && (
               <Route
                 path="/seach"
-                element={<Search logedin={logedin} setLogedin={setLogedin} />}
+                element={
+                  <Search
+                    logedin={logedin}
+                    setLogedin={setLogedin}
+                    favorites={favorites}
+                    setFavorites={setFavorites}
+                  />
+                }
               />
             )}
             {logedin && (
@@ -59,7 +67,12 @@ function App() {
               <Route
                 path="/favorites"
                 element={
-                  <Favorites logedin={logedin} setLogedin={setLogedin} />
+                  <Favorites
+                    logedin={logedin}
+                    setLogedin={setLogedin}
+                    favorites={favorites}
+                    setFavorites={setFavorites}
+                  />
                 }
               />
             )}
@@ -84,7 +97,6 @@ function App() {
           </>
         </Routes>
       </Router>
-   
     </div>
   );
 }
