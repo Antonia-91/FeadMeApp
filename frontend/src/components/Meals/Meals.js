@@ -27,6 +27,7 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
     console.log(data);
     let result = data.data;
     let join = result.join();
+    console.log(join);
 
     let updateUserInfo = {
       userName: logedin.userName,

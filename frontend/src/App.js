@@ -19,6 +19,7 @@ function App() {
   const [logedin, setLogedin] = useState();
   const [todos, setTodos] = useState([]);
   const [favorites, setFavorites] = useState([]);
+  //console.log(favorites)
 
   useEffect(() => {
     const getUser = localStorage.getItem("user")

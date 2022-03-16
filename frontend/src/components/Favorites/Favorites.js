@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from "react";
 
 const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
-  const [userId, setUserId] = useState();
-  // const [favorites, setFavorites] = useState([]);
 
   console.log("favorites", favorites);
+  console.log(logedin);
 
   useEffect(() => {
-    setUserId(logedin.user_id);
+    // setUserId(logedin.user_id);
     if (logedin.user_favs != null) {
       let favString = logedin.user_favs;
       let split = favString.split(",");
       let numbering = split.map((string) => parseInt(string));
-      // console.log(numbering);
-      //// OBS FÖRSTA GÅNGEN MAN LÄGGER TILL EN FAVORITE KOMMER DET SKAPAS EN NaN ! DÅ FUNGERER INTE DENNA FETCHEN
+      console.log(numbering);
+
       const request = numbering.map((number) =>
         fetch(
           `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${number}`
         ).then((res) => res.json())
       );
       Promise.all(request).then((res) => setFavorites(res));
+      //console.log(favorites.map((fav) => fav.meals[0].idMeal)
+
+     
     } else {
       console.log("null favs");
     }
   }, [logedin]);
+
 
   //// remove from fav
   const onRemoveFavorite = async (id) => {
@@ -95,3 +98,21 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
 };
 
 export default Favorites;
+
+
+  // useEffect(() => {
+  //   if(favorites.length != null){
+  //     //  let user_favs = favorites.map((fav) => fav.meals[0].idMeal).join();
+  //     // console.log("user_favs", user_favs);
+
+  //     // let updateUserInfo = {
+  //     //   userName: logedin.userName,
+  //     //   userPass: logedin.userPass,
+  //     //   user_favs: user_favs,
+  //     //   user_id: logedin.user_id,
+  //     // };
+
+  //     // console.log("updateUserInfo", updateUserInfo);
+  //     // setLogedin(updateUserInfo);
+  //   }
+  // })
