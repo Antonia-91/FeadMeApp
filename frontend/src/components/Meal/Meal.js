@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 const Meal = ({ logedin, todos, setTodos }) => {
   const [meal, setMeal] = useState();
@@ -42,6 +42,9 @@ const Meal = ({ logedin, todos, setTodos }) => {
       <header>
         <h3>{meal.strMeal}</h3>
         <p>{meal.strCategory}</p>
+        <a href={meal.strYoutube} target="_blank" rel="nereferrer">
+          <i class="fas fa-eye"></i> visit
+        </a>
       </header>
       <section>
         <article>
