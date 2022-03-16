@@ -48,6 +48,13 @@ button {
   background: $btn-background;
 }
 
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
 .hide {
   display: none;
 }

@@ -7,41 +7,53 @@ const Navbar = ({ logedin, setLogedin }) => {
     setLogedin(null);
   };
   return (
-    <nav>
-      <h1>FeadMeApp</h1>
-      <ul>
-        {logedin && <button onClick={logout}>logout</button>}
+    <nav className="navbar-container">
+      <NavLink className="nav-links" to="/">
+        <h1 className="nav-logo">FeadMeApp</h1>
+      </NavLink>
+
+      <ul className="nav-link-holder">
         {logedin && (
           <li>
-            <NavLink to="/seach"> Recepies </NavLink>
+            <NavLink className="nav-links" to="/seach">
+              {" "}
+              Recepies{" "}
+            </NavLink>
+          </li>
+        )}
+    
+        {logedin && (
+          <li>
+            <NavLink className="nav-links" to="/favorites">
+              {" "}
+              Favorites{" "}
+            </NavLink>
           </li>
         )}
         {logedin && (
           <li>
-            <NavLink to="/"> Home </NavLink>
+            <NavLink className="nav-links" to="/todo">
+              {" "}
+              Shoppinglist{" "}
+            </NavLink>
           </li>
         )}
         {logedin && (
           <li>
-            <NavLink to="/favorites"> Favorites </NavLink>
-          </li>
-        )}
-        {logedin && (
-          <li>
-            <NavLink to="/todo"> Shoppinglist </NavLink>
-          </li>
-        )}
-        {logedin && (
-          <li>
-            <NavLink to="/calendar"> Calendar </NavLink>
+            <NavLink className="nav-links" to="/calendar">
+              {" "}
+              Calendar{" "}
+            </NavLink>
           </li>
         )}
         {!logedin && (
           <li>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink className="nav-links" to="/login">
+              Login
+            </NavLink>
           </li>
         )}
-        {}
+        {logedin && <button onClick={logout}>logout</button>}
       </ul>
     </nav>
   );

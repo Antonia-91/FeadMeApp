@@ -8,8 +8,9 @@ import bubble from "./images/bubbla.png";
 
 const Home = () => {
   return (
-    <section className="home">
-      <header className="home-header">
+    <main className="home">
+      <section className="home-section"> hh</section>
+      <article className="home-search">
         <div className="home-title">
           <h3>Explore foods from around the globe.</h3>
           <p>
@@ -21,7 +22,7 @@ const Home = () => {
         <div>
           <button>Search Recepies </button>
         </div>
-      </header>
+      </article>
 
       <div className="category-wrapper">
         <article className="category-article">
@@ -69,7 +70,7 @@ const Home = () => {
         <img src={bubble} alt="" />
         <img src={bubble} alt="" />
       </div>
-    </section>
+    </main>
   );
 };
 

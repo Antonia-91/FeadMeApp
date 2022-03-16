@@ -1,3 +1,44 @@
-.header {
-  //background: $rgba-light;
+@media screen and (max-width: 400px) {
+}
+.navbar-container {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  top: 0;
+  z-index: 20;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+}
+.nav-logo {
+  font-size: 40px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff4e50),
+    color-stop(20%, #f39c12),
+    to(#f9d423)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link-holder {
+  //margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .nav-links {
+    color: white;
+
+    padding: 1rem;
+
+    &:hover {
+      color: #ff4e50;
+    }
+  }
 }
