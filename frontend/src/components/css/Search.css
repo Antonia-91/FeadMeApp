@@ -1,1 +1,1 @@
-.search-main{z-index:2}.search-article{z-index:2}
+.search-main{z-index:2;width:100vw;height:auto;max-width:100%;display:flex;align-items:center;flex-direction:column}.search-main .seach-section{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding:2rem;border:1px solid #000;background-color:∞;width:100%}.search-main .search{z-index:2;display:flex;width:80vw;flex-wrap:wrap;margin:1rem;align-items:center;justify-content:space-evenly}.search-article{z-index:2}

@@ -3,26 +3,62 @@ import baking from "./images/baking.jpg";
 import dinner from "./images/brekker.jpg";
 import lunch from "./images/lunch.jpg";
 import brekker from "./images/dinner.jpg";
+import listImg from "./images/list.png";
+import { NavLink } from "react-router-dom";
 
 import bubble from "./images/bubbla.png";
 
-const Home = () => {
+const Home = ({ todos, logedin }) => {
+  console.log(logedin);
   return (
     <main className="home">
-      <section className="home-section"> hh</section>
-      <article className="home-search">
-        <div className="home-title">
-          <h3>Explore foods from around the globe.</h3>
-          <p>
-            Whether you're looking for healthy recipes, or ideas on how to use
-            leftovers from your fridge, we've numerous recipes to choose from,
-            so you'll be able to find the perfect dish.
-          </p>
+      <section className="home-top-section">
+        <div className="card">
+          <div className="card-content">
+            <ul>
+              <li>
+                {" "}
+                <h3 style={{ textTransform: "capitalize" }}>
+                  {logedin.userName}
+                </h3>
+              </li>
+              <li>goals: 2200 kcal</li>
+              <li>water: 3 L</li>
+            </ul>
+
+            <NavLink className="nav-links" to="/calendar">
+              <h4>Calendar</h4>
+            </NavLink>
+          </div>
         </div>
-        <div>
-          <button>Search Recepies </button>
+        <div
+          className="card "
+          // style={{ backgroundImage: `url(${listImg})`, width: "200px" }}
+        >
+          <div className="card-content">
+            <NavLink className="nav-links" to="/todo">
+              <h4>Shoppinglist</h4>
+              You have {todos?.length}
+            </NavLink>
+          </div>
         </div>
-      </article>
+      </section>
+
+      <section className="home-middle-section">
+        <article className="home-search">
+          <div className="home-title">
+            <h3>Explore foods from around the globe.</h3>
+            <p>
+              Whether you're looking for healthy recipes, or ideas on how to use
+              leftovers from your fridge, we've numerous recipes to choose from,
+              so you'll be able to find the perfect dish.
+            </p>
+          </div>
+          <div>
+            <button>Search Recepies </button>
+          </div>
+        </article>
+      </section>
 
       <div className="category-wrapper">
         <article className="category-article">

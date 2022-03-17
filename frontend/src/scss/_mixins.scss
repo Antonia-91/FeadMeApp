@@ -1,0 +1,31 @@
+@mixin blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+@mixin blurLight {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+@mixin navLinks {
+  .nav-links {
+    color: white;
+    padding: 1rem;
+    margin-left: 1rem;
+
+    &:hover {
+      color: #ff4e50;
+    }
+  }
+}
+
+@mixin input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 300px;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin: 20px 0;
+}

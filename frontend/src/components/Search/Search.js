@@ -20,35 +20,32 @@ const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
       .then((data) => setMeals(data.meals));
   };
 
- 
-
-
   return (
     <main className="search-main">
-      search Recepires{" "}
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Type a meal name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button onClick={fetchMealsHandler}>Search Meal</button>
+      <div
+      
+        className="seach-section"
+        // style={{ backgroundImage: `url(${orangesImg})`, width: "200px" }}
+      > <h2>hej</h2>
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Type a meal name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button onClick={fetchMealsHandler}>Search</button>
+        </div>
       </div>
-      <section>
-      <Meals meals={meals} logedin={logedin} setLogedin={setLogedin} favorites={favorites} setFavorites={setFavorites}/>
-        {/* {meals.map((meal) => (
-          <article className="search-article" key={meal.idMeal}>
-            <img src={meal.strMealThumb} alt={`${meal.strMeal}`} />
-            <div>
-              <NavLink to={`/${meal.idMeal}`}>
-                <h4>{meal.strMeal}</h4>
-              </NavLink>
 
-              <button onClick={() => addFav(meal.idMeal)}> add </button>
-            </div>
-          </article>
-        ))} */}
+      <section className="meals-section">
+        <Meals
+          meals={meals}
+          logedin={logedin}
+          setLogedin={setLogedin}
+          favorites={favorites}
+          setFavorites={setFavorites}
+        />
       </section>
     </main>
   );

@@ -89,9 +89,9 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
   return (
     <>
       {meals.map((meal) => (
-        <article className="search-article" key={meal.idMeal}>
+        <article className="meals-article" key={meal.idMeal}>
           <img src={meal.strMealThumb} alt={`${meal.strMeal}`} />
-          <div>
+          <div className="meals-info">
             <NavLink to={`/${meal.idMeal}`}>
               <h4>{meal.strMeal}</h4>
             </NavLink>

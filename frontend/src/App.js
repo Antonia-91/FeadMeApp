@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <>
             {logedin && (
-              <Route exact path="/" element={<Home logedin={logedin} />} />
+              <Route exact path="/" element={<Home logedin={logedin} todos={todos}/>} />
             )}
             {logedin && (
               <Route

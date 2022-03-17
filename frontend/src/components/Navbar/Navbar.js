@@ -38,14 +38,14 @@ const Navbar = ({ logedin, setLogedin }) => {
             </NavLink>
           </li>
         )}
-        {logedin && (
+        {/* {logedin && (
           <li>
             <NavLink className="nav-links" to="/calendar">
               {" "}
               Calendar{" "}
             </NavLink>
           </li>
-        )}
+        )} */}
         {!logedin && (
           <li>
             <NavLink className="nav-links" to="/login">
