@@ -27,5 +27,27 @@
   width: 300px;
   font-size: 1rem;
   border-radius: 20px;
-  margin: 20px 0;
+  margin: 20px;
+}
+
+@mixin wrapper {
+  z-index: 2;
+  display: flex;
+  width: fit-content;
+  flex-wrap: wrap;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin cardArticle {
+  z-index: 2;
+  margin: 1rem;
+  box-shadow: $box-shadow;
+  border: 1px solid transparent;
+  border-radius: 20px;
+
+  &:hover {
+    border: 1px solid black;
+  }
 }

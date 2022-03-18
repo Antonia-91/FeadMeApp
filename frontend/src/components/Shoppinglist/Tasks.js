@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 
 const Tasks = ({ todos, setTodos, reminder }) => {
-
-
   //// Fetch one todo
   const fetchTodo = async (id) => {
     const res = await fetch(`http://localhost:5005/todo/${id}`);
@@ -41,14 +39,12 @@ const Tasks = ({ todos, setTodos, reminder }) => {
   //// on delete
   const onDelete = async (id) => {
     console.log(id);
-    await fetch(`http://localhost:5008/todo/${id}`, {
+    await fetch(`http://localhost:5005/todo/${id}`, {
       method: "DELETE",
     });
     setTodos(todos.filter((todo) => todo.todoList_id != id));
   };
 
-
-  
   return (
     <>
       {todos.map((todo) => (

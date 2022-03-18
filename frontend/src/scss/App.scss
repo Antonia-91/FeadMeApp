@@ -7,6 +7,8 @@
 @import "../components/Meals/Meals.scss";
 @import "../components/Meal/Meal.scss";
 @import "../components/Shoppinglist/Shoppinglist.scss";
+@import "../components/Favorites/Favorites.scss";
+
 //@import "../src/backgroundImg/web.jpg";
 * {
   box-sizing: border-box;
@@ -45,7 +47,7 @@ body {
   }
 }
 .seach-section {
-  background-image: url("../backgroundImg/oranges.png");
+  background-image: url("../backgroundImg/oranges2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -53,7 +55,7 @@ body {
 button {
   background: $btn-background;
   border: none;
-  padding: 1rem;
+  padding: 12px;
   border-radius: 40px;
   color: white;
 

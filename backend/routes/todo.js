@@ -107,4 +107,29 @@ router.delete("/todo/:id", (req, res) => {
   });
 });
 
+
+/// adding multiply todos
+
+router.post("/addMultiTodos", (req, res) => {
+  console.log(req.body);
+
+  req.app.locals.con.connect((err) => {
+    if (err) {
+      console.log(err);
+    }
+    let sql = `INSERT INTO todoListTable (todoList_title, user_id) VALUES ?`;
+
+    req.app.locals.con.query(sql, [req.body], (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(result);
+
+      res.json({ message: "ok", result: result });
+    });
+  });
+});
+
+
+
 module.exports = router;

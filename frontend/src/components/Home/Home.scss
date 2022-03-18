@@ -26,11 +26,9 @@
     z-index: 2;
     background-color: $card-background;
     display: flex;
-   
+
     &-content {
-
       padding: 1rem;
-
     }
   }
 
@@ -68,25 +66,11 @@
 }
 
 .category-wrapper {
-  z-index: 2;
-  display: flex;
-  width: fit-content;
-  flex-wrap: wrap;
-  margin: 1rem;
-  align-items: center;
-  justify-content: center;
+  @include wrapper;
+}
 
-  .category-article {
-    z-index: 2;
-    margin: 1rem;
-    box-shadow: $box-shadow;
-    border: 1px solid transparent;
-    border-radius: 20px;
-
-    &:hover {
-      border: 1px solid black;
-    }
-  }
+.category-article {
+  @include cardArticle;
 }
 
 ////// bubbles

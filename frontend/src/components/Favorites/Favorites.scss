@@ -1,0 +1,25 @@
+.favorite-wrapper {
+  //@include wrapper;
+  @include wrapper;
+}
+
+.meals-article {
+  @include cardArticle;
+  background-color: $lightOrange;
+
+  img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .meals-info {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    background: transparent;
+    //background-color: $lightOrange;
+    border-radius: 20px;
+  }
+}

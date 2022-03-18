@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
-
   console.log("favorites", favorites);
   console.log(logedin);
 
@@ -20,13 +20,10 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
       );
       Promise.all(request).then((res) => setFavorites(res));
       //console.log(favorites.map((fav) => fav.meals[0].idMeal)
-
-     
     } else {
       console.log("null favs");
     }
   }, [logedin]);
-
 
   //// remove from fav
   const onRemoveFavorite = async (id) => {
@@ -74,45 +71,49 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
 
   if (!Favorites) return null;
   return (
-    <div>
+    <main className="favorite-main">
       {logedin.userName}
       <h2>My Favorites </h2>
+      <section className="favorite-wrapper">
+        <div>
+          {favorites.map((fav) => (
+            <article className="favorite-article" key={fav.meals[0].idMeal}>
+              <img src={fav.meals[0].strMealThumb} alt="#" />
+              <div className="meals-info">
+                <NavLink to={`/${fav.meals[0].idMeal}`}>
+                  <h4> {fav.meals[0].strMeal}</h4>
+                </NavLink>
 
-      <div>
-        {favorites.map((fav) => (
-          <article key={fav.meals[0].idMeal}>
-            <img src={fav.meals[0].strMealThumb} alt="#" />
-            <h4> {fav.meals[0].strMeal}</h4>
-
-            <button
-              id={fav.meals[0].idMeal}
-              onClick={(e) => onRemoveFavorite(e.target.id)}
-            >
-              Remove
-            </button>
-          </article>
-        ))}
-      </div>
-    </div>
+                <button
+                  id={fav.meals[0].idMeal}
+                  onClick={(e) => onRemoveFavorite(e.target.id)}
+                >
+                  Remove
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 };
 
 export default Favorites;
 
+// useEffect(() => {
+//   if(favorites.length != null){
+//     //  let user_favs = favorites.map((fav) => fav.meals[0].idMeal).join();
+//     // console.log("user_favs", user_favs);
 
-  // useEffect(() => {
-  //   if(favorites.length != null){
-  //     //  let user_favs = favorites.map((fav) => fav.meals[0].idMeal).join();
-  //     // console.log("user_favs", user_favs);
+//     // let updateUserInfo = {
+//     //   userName: logedin.userName,
+//     //   userPass: logedin.userPass,
+//     //   user_favs: user_favs,
+//     //   user_id: logedin.user_id,
+//     // };
 
-  //     // let updateUserInfo = {
-  //     //   userName: logedin.userName,
-  //     //   userPass: logedin.userPass,
-  //     //   user_favs: user_favs,
-  //     //   user_id: logedin.user_id,
-  //     // };
-
-  //     // console.log("updateUserInfo", updateUserInfo);
-  //     // setLogedin(updateUserInfo);
-  //   }
-  // })
+//     // console.log("updateUserInfo", updateUserInfo);
+//     // setLogedin(updateUserInfo);
+//   }
+// })

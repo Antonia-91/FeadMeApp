@@ -1,8 +1,9 @@
 import React from "react";
 import baking from "./images/baking.jpg";
-import dinner from "./images/brekker.jpg";
+import breakfast from "./images/breakFast.jpg";
+import brunch from "./images/brekker.jpg";
 import lunch from "./images/lunch.jpg";
-import brekker from "./images/dinner.jpg";
+import dinner from "./images/dinner.jpg";
 import listImg from "./images/list.png";
 import { NavLink } from "react-router-dom";
 
@@ -15,30 +16,10 @@ const Home = ({ todos, logedin }) => {
       <section className="home-top-section">
         <div className="card">
           <div className="card-content">
-            <ul>
-              <li>
-                {" "}
-                <h3 style={{ textTransform: "capitalize" }}>
-                  {logedin.userName}
-                </h3>
-              </li>
-              <li>goals: 2200 kcal</li>
-              <li>water: 3 L</li>
-            </ul>
+            <h3 style={{ textTransform: "capitalize" }}>{logedin.userName}</h3>
 
             <NavLink className="nav-links" to="/calendar">
               <h4>Calendar</h4>
-            </NavLink>
-          </div>
-        </div>
-        <div
-          className="card "
-          // style={{ backgroundImage: `url(${listImg})`, width: "200px" }}
-        >
-          <div className="card-content">
-            <NavLink className="nav-links" to="/todo">
-              <h4>Shoppinglist</h4>
-              You have {todos?.length}
             </NavLink>
           </div>
         </div>
@@ -63,10 +44,10 @@ const Home = ({ todos, logedin }) => {
       <div className="category-wrapper">
         <article className="category-article">
           <img
-            src={brekker}
+            src={brunch}
             width="200"
             height="200"
-            alt="choklet"
+            alt="avocado sandwish"
             style={{ borderRadius: "20px" }}
           />
         </article>
@@ -76,7 +57,7 @@ const Home = ({ todos, logedin }) => {
             src={lunch}
             width="200"
             height="200"
-            alt="choklet"
+            alt="spagetti and tomato dish"
             style={{ borderRadius: "20px" }}
           />
         </article>
@@ -85,7 +66,7 @@ const Home = ({ todos, logedin }) => {
             src={dinner}
             width="200"
             height="200"
-            alt="choklet"
+            alt="bown with shripms"
             style={{ borderRadius: "20px" }}
           />
         </article>

@@ -38,7 +38,7 @@ const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
         </div>
       </div>
 
-      <section className="meals-section">
+      <section className="meals-wrapper">
         <Meals
           meals={meals}
           logedin={logedin}
