@@ -7,12 +7,12 @@ const Form = ({ logedin, todos, setTodos }) => {
   /// on submit form
   const onsubmit = async (e) => {
     e.preventDefault();
-
+    // ehere there in an linebrake , split string
     splitString = string.split("\n"); // or (",")
 
     let arrayToServer = [];
     let newSubArray = [];
-
+    // for each string in splitstrinArray, add user Id,
     for (let i = 0; i < splitString.length; i++) {
       newSubArray = [splitString[i], logedin.user_id];
       arrayToServer[arrayToServer.length] = newSubArray;

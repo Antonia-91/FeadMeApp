@@ -37,7 +37,8 @@
   align-items: center;
 
   .nav-links {
-    color: white;
+    //color: white;
+    color: rgb(48, 46, 46);
     padding: 1rem;
     margin-left: 1rem;
 
@@ -66,7 +67,8 @@
     position: fixed;
     bottom: 0;
     z-index: 3;
-    background-color: $card-background;
+    //background-color: $card-background;
+    background-color: rgba(255, 166, 0, 0.26);
     padding: 2rem;
   }
 }

@@ -4,7 +4,8 @@
 
 .meals-article {
   @include cardArticle;
-  background-color: $lightOrange;
+  //background-color: $lightOrange;
+  background-color: $opasityOrnge;
 
   img {
     border-radius: 20px;

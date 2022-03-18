@@ -4,7 +4,7 @@ import Form from "./Form";
 
 const Meal = ({ logedin, todos, setTodos }) => {
   const [meal, setMeal] = useState();
-  console.log(meal);
+ 
   // get id from URL
   let { id } = useParams();
 
