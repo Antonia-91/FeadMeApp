@@ -4,7 +4,6 @@
 
 .meals-article {
   @include cardArticle;
-  //background-color: $lightOrange;
   background-color: $opasityOrnge;
 
   img {
@@ -21,5 +20,7 @@
     background: transparent;
     //background-color: $lightOrange;
     border-radius: 20px;
+    // max-height: 30px;
+    // overflow: scroll;
   }
 }

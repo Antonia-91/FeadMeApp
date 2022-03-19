@@ -53,15 +53,17 @@ const Tasks = ({ todos, setTodos, reminder }) => {
           key={todo.todoList_id}
           onDoubleClick={() => onDoubbleClick(todo.todoList_id)}
         >
-          <section className={` ${todo.todoList_reminder ? "reminder" : ""}`}>
-            <h3>
-              {todo.todoList_title}
-              <FaTimes
-                style={{ color: "red", cursor: "pointer" }}
-                onClick={() => onDelete(todo.todoList_id)}
-              />
-            </h3>
-          </section>
+          <div
+            className={` ${
+              todo.todoList_reminder ? "reminder todo-info" : "todo-info"
+            }`}
+          >
+            <h3>{todo.todoList_title}</h3>
+            <FaTimes
+              style={{ color: "red", cursor: "pointer" }}
+              onClick={() => onDelete(todo.todoList_id)}
+            />
+          </div>
         </div>
       ))}
     </>

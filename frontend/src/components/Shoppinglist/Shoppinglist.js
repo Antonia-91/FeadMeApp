@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Tasks from "./Tasks";
 
-const Shoppinglist = ({ logedin, setLogedin , todos, setTodos}) => {
+const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
   //const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
   const [reminder, setReminder] = useState(false);
@@ -23,9 +23,8 @@ const Shoppinglist = ({ logedin, setLogedin , todos, setTodos}) => {
     const data = await res.json();
     return data;
   };
- 
 
-  //// add new Todo 
+  //// add new Todo
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!text) {
@@ -41,7 +40,7 @@ const Shoppinglist = ({ logedin, setLogedin , todos, setTodos}) => {
     setReminder(false);
   };
 
-  //// post new todo 
+  //// post new todo
   const onAdd = async (obj) => {
     const res = await fetch("http://localhost:5005/addTodo", {
       method: "POST",
@@ -64,11 +63,10 @@ const Shoppinglist = ({ logedin, setLogedin , todos, setTodos}) => {
     }
   };
 
-  //// Delete new todo 
+  //// Delete new todo
 
   return (
-    <div>
-      Todo
+    <main className="shoppinglist-main">
       <form className="add-form" onSubmit={onSubmit}>
         <div className="form-control">
           <input
@@ -88,11 +86,13 @@ const Shoppinglist = ({ logedin, setLogedin , todos, setTodos}) => {
             onChange={(e) => setReminder(e.currentTarget.checked)}
           />
         </div>
-        <button type="submit"> Add </button>
+        <div>
+          <button type="submit"> Add </button>
+        </div>
       </form>
       <Tasks todos={todos} setTodos={setTodos} reminder={reminder} />
-    </div>
+    </main>
   );
 };
 
-export default Shoppinglist
+export default Shoppinglist;

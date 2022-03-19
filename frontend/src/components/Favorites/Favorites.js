@@ -72,28 +72,23 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
   if (!Favorites) return null;
   return (
     <main className="favorite-main">
-      {logedin.userName}
-      <h2>My Favorites </h2>
+      <h2>My Favorites - {logedin.userName}</h2>
       <section className="favorite-wrapper">
-        <div>
-          {favorites.map((fav) => (
-            <article className="favorite-article" key={fav.meals[0].idMeal}>
-              <img src={fav.meals[0].strMealThumb} alt="#" />
-              <div className="meals-info">
-                <NavLink to={`/${fav.meals[0].idMeal}`}>
-                  <h4> {fav.meals[0].strMeal}</h4>
-                </NavLink>
+        {favorites.map((fav) => (
+          <article className="favorite-article" key={fav.meals[0].idMeal}>
+            <img src={fav.meals[0].strMealThumb} alt="#" />
+            <div className="favorite-info">
+              <NavLink to={`/${fav.meals[0].idMeal}`}>
+                <h4> {fav.meals[0].strMeal}</h4>
+              </NavLink>
 
-                <button
-                  id={fav.meals[0].idMeal}
-                  onClick={(e) => onRemoveFavorite(e.target.id)}
-                >
-                  Remove
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
+              <i
+                class="fas fa-trash"
+                onClick={(e) => onRemoveFavorite(e.target.id)}
+              ></i>
+            </div>
+          </article>
+        ))}
       </section>
     </main>
   );
