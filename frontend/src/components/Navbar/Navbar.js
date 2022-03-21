@@ -16,8 +16,8 @@ const Navbar = ({ logedin, setLogedin }) => {
         {logedin && (
           <li>
             <NavLink className="nav-links" to="/seach">
-              {" "}
-              Recepies{" "}
+            
+              Recepies
             </NavLink>
           </li>
         )}

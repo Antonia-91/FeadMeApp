@@ -101,7 +101,7 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
               ) : (
                 <i
                   class="fas fa-trash"
-                  onClick={(e) => onRemoveFavorite(e.target.id)}
+                  onClick={(e) => onRemoveFavorite(meal.idMeal)}
                 ></i>
               )}
             </>

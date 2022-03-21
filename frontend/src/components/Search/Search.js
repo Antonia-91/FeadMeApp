@@ -11,6 +11,7 @@ const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
   /// fetch meals
   const fetchMealsHandler = () => {
     fetchMeals(searchTerm);
+    setSearchTerm("");
   };
 
   /// fetch meals by searchterm
@@ -23,7 +24,7 @@ const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
   return (
     <main className="search-main">
       <div className="seach-section">
-        <h2>hej</h2>
+        <h2>Search through tousends of recipes</h2>
         <div className="search">
           <input
             type="text"

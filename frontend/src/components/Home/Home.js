@@ -50,7 +50,10 @@ const Home = ({ todos, logedin }) => {
             </p>
           </div>
           <div>
-            <button>Search Recepies </button>
+            <NavLink to="/seach">
+              {" "}
+              <button>Search Recepies </button>
+            </NavLink>
           </div>
         </article>
       </section>

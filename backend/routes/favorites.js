@@ -65,7 +65,7 @@ router.post("/addFav", (req, res) => {
 router.post("/removeFav", (req, res) => {
   const userId = req.body.userId;
   const mealId = req.body.mealId;
-  console.log(userId, mealId);
+  console.log("userId: ", userId, "mealId:", mealId);
 
   req.app.locals.con.connect((err) => {
     if (err) {
@@ -82,6 +82,8 @@ router.post("/removeFav", (req, res) => {
       let split = favResults.split(",");
       console.log("split before", split);
       for (let i = 0; i < split.length; i++) {
+        console.log("split[i]", split[i]);
+        console.log("mealId", mealId);
         if (split[i] === mealId) {
           split.splice(i, 1);
         }
@@ -96,13 +98,10 @@ router.post("/removeFav", (req, res) => {
         }
         console.log(result);
         console.log(split);
-
-        // res.json({ ok: "ok", data: split });
-        //res.json({ ok: "ok" });
       });
     });
   });
-  // res.json({ ok: "ok" });
+
   res.status(200).json({ message: "success" });
 });
 
@@ -128,8 +127,8 @@ router.post("/addDate", (req, res) => {
   });
 });
 
-/// get all saved dates 
-router.get("/dates/:id",  (req, res) => {
+/// get all saved dates
+router.get("/dates/:id", (req, res) => {
   const user_id = req.params.id;
   req.app.locals.con.connect((err) => {
     if (err) {
@@ -145,6 +144,6 @@ router.get("/dates/:id",  (req, res) => {
       res.json(result);
     });
   });
-})
+});
 
 module.exports = router;

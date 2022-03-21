@@ -1,7 +1,6 @@
 .home {
   z-index: 2;
   width: 100vw;
-  //border: 1px solid black;
   height: auto;
   max-width: 100%;
   display: flex;
@@ -13,7 +12,7 @@
   display: flex;
   width: fit-content;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 2rem;
   align-items: center;
   justify-content: center;
 
@@ -48,8 +47,8 @@
 }
 
 .home-search {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   z-index: 2;
   min-width: 90vh;
   display: flex;
@@ -67,6 +66,7 @@
 
 .category-wrapper {
   @include wrapper;
+  padding-bottom: 10rem;
 }
 
 .category-article {

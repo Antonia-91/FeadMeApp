@@ -32,6 +32,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
       userId: logedin.user_id,
       mealId: id,
     };
+    console.log("obj", obj);
     await removeFavorite(obj);
   };
 
@@ -46,6 +47,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
     });
     const data = await res.json();
     console.log(data);
+    /// filtrera array favoriter. sortera ut den somhar samma id som vi precis raderat
     if ((data.message = "success")) {
       let filtered = favorites.filter(
         (fav) => fav.meals[0].idMeal != obj.mealId
@@ -53,11 +55,12 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
       console.log("filtered", filtered);
       setFavorites(filtered);
 
+      /// plocka ut alla favoriters id, gör till en sträng och (join)
       let sliceFiltered = filtered.map((fav) => fav.meals[0].idMeal);
       console.log("sliceFiltered", sliceFiltered);
-
       let join = sliceFiltered.join();
 
+      /// tag våran joinade sträng och uppdatera våran logiedin user ( user_favs : join)
       let updateUserInfo = {
         userName: logedin.userName,
         userPass: logedin.userPass,
@@ -84,7 +87,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
 
               <i
                 class="fas fa-trash"
-                onClick={(e) => onRemoveFavorite(e.target.id)}
+                onClick={(e) => onRemoveFavorite(fav.meals[0].idMeal)}
               ></i>
             </div>
           </article>
