@@ -49,18 +49,20 @@ const Form = ({ logedin, todos, setTodos }) => {
   };
 
   return (
-    <form onSubmit={onsubmit}>
-      <textarea
-        type="text"
-        placeholder="shoppinglist..."
-        value={string}
-        onChange={(e) => setString(e.target.value)}
-      ></textarea>
+    <div className="form">
+      <form onSubmit={onsubmit}>
+        <textarea
+          type="text"
+          placeholder="shoppinglist..."
+          value={string}
+          onChange={(e) => setString(e.target.value)}
+        ></textarea>
 
-      <button className="add-btn" type="submit">
-        Add{" "}
-      </button>
-    </form>
+        <button className="add-btn" type="submit">
+          Add{" "}
+        </button>
+      </form>
+    </div>
   );
 };
 

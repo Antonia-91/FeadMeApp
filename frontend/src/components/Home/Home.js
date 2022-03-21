@@ -6,21 +6,35 @@ import lunch from "./images/lunch.jpg";
 import dinner from "./images/dinner.jpg";
 import listImg from "./images/list.png";
 import { NavLink } from "react-router-dom";
+import moment from "moment";
 
 import bubble from "./images/bubbla.png";
 
 const Home = ({ todos, logedin }) => {
   console.log(logedin);
+
+  const current = new Date();
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()} /${current.getDate()}`;
+
+  // console.log(moment(date).week());
+  // console.log(moment(date).isoWeek());
+
   return (
     <main className="home">
       <section className="home-top-section">
         <div className="card">
           <div className="card-content">
-            <h3 style={{ textTransform: "capitalize" }}>{logedin.userName}</h3>
-
-            <NavLink className="nav-links" to="/calendar">
+            <h3 style={{ textTransform: "capitalize" }}>
+              {logedin.userName}s week: - {date}
+            </h3>
+            <p>WensDay: eggBenedict, go to recepie</p>
+            <p>Friday</p>
+            <p></p>
+            {/* <NavLink className="nav-links" to="/calendar">
               <h4>Calendar</h4>
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </section>

@@ -18,13 +18,13 @@
   justify-content: center;
 
   .card {
-    width: 200px;
+    width: 400px;
     height: 200px;
     border-radius: 20px;
     margin: 1rem;
-    box-shadow: $box-shadow;
+    box-shadow: $left-box-shadow;
     z-index: 2;
-    background-color: $card-background;
+    background-color: transparent;
     display: flex;
 
     &-content {

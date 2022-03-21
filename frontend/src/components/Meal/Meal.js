@@ -4,7 +4,7 @@ import Form from "./Form";
 
 const Meal = ({ logedin, todos, setTodos }) => {
   const [meal, setMeal] = useState();
- 
+
   // get id from URL
   let { id } = useParams();
 
@@ -28,47 +28,56 @@ const Meal = ({ logedin, todos, setTodos }) => {
         <h3>{meal.strMeal}</h3>
         <p>{meal.strCategory}</p>
         <a href={meal.strYoutube} target="_blank" rel="nereferrer">
-          <i class="fas fa-eye"></i> visit
+          <i class="fas fa-eye"></i> whatch Youtube{" "}
         </a>
       </header>
       <section className="meal-wrapper">
         <article className="meal-article">
           <img src={meal.strMealThumb} alt={`${meal.strMeal}`} />
+          <div className="meal-instructions">
+            <h3>Instructions</h3>
+            <p>{meal.strInstructions}</p>
+          </div>
         </article>
-        <article className="meal-measure">
-          <ul>
-            <li>{meal?.strIngredient1}</li>
-            <li>{meal?.strIngredient2}</li>
-            <li>{meal?.strIngredient3}</li>
-            <li>{meal?.strIngredient4}</li>
-            <li>{meal?.strIngredient5}</li>
-            <li>{meal?.strIngredient6}</li>
-            <li>{meal?.strIngredient7}</li>
-            <li>{meal?.strIngredient8}</li>
-            <li>{meal?.strIngredient9}</li>
-            <li>{meal?.strIngredient10}</li>
-            <li>{meal?.strIngredient11}</li>
-          </ul>
 
-          <ul>
-            <li>{meal?.strMeasure1}</li>
-            <li>{meal?.strMeasure2}</li>
-            <li>{meal?.strMeasure3}</li>
-            <li>{meal?.strMeasure4}</li>
-            <li>{meal?.strMeasure5}</li>
-            <li>{meal?.strMeasure6}</li>
-            <li>{meal?.strMeasure7}</li>
-            <li>{meal?.strMeasure8}</li>
-            <li>{meal?.strMeasure9}</li>
-            <li>{meal?.strMeasure10}</li>
-            <li>{meal?.strMeasure11}</li>
-          </ul>
-        </article>
-        <article>
-          <p>{meal.strInstructions}</p>
-        </article>
-        <div className="meal-form-content">
-          <Form logedin={logedin} todos={todos} setTodos={setTodos} />
+        <div className="meal-article-wrapper">
+          <article className="meal-measure-holder">
+            <h3>Ingridience</h3>
+            <div className="meal-measure">
+              <ul>
+                <li>{meal?.strIngredient1}</li>
+                <li>{meal?.strIngredient2}</li>
+                <li>{meal?.strIngredient3}</li>
+                <li>{meal?.strIngredient4}</li>
+                <li>{meal?.strIngredient5}</li>
+                <li>{meal?.strIngredient6}</li>
+                <li>{meal?.strIngredient7}</li>
+                <li>{meal?.strIngredient8}</li>
+                <li>{meal?.strIngredient9}</li>
+                <li>{meal?.strIngredient10}</li>
+                <li>{meal?.strIngredient11}</li>
+              </ul>
+
+              <ul>
+                <li>{meal?.strMeasure1}</li>
+                <li>{meal?.strMeasure2}</li>
+                <li>{meal?.strMeasure3}</li>
+                <li>{meal?.strMeasure4}</li>
+                <li>{meal?.strMeasure5}</li>
+                <li>{meal?.strMeasure6}</li>
+                <li>{meal?.strMeasure7}</li>
+                <li>{meal?.strMeasure8}</li>
+                <li>{meal?.strMeasure9}</li>
+                <li>{meal?.strMeasure10}</li>
+                <li>{meal?.strMeasure11}</li>
+              </ul>
+            </div>
+          </article>
+
+          <article className="meal-form">
+            <h3>Add to shoppinglist</h3>
+            <Form logedin={logedin} todos={todos} setTodos={setTodos} />
+          </article>
         </div>
       </section>
     </main>

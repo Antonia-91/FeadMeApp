@@ -25,7 +25,7 @@
 }
 
 .todo-content {
-  width: 50vw;
+  width: 400px;
   box-shadow: $box-shadow;
   display: flex;
   flex-direction: row;
@@ -42,7 +42,7 @@
 .todo-info {
   display: flex;
   align-items: center;
-  width: 50vw;
+  width: 400px;
   justify-content: space-between;
 }
 
@@ -52,5 +52,13 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  .todo-content {
+    width: 90%;
+  }
+
+  .todo-info {
+    width: 100%;
   }
 }
