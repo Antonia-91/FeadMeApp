@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Search from "./components/Search/Search";
 import Shoppinglist from "./components/Shoppinglist/Shoppinglist";
 
+
 import "./css/App.css";
 
 //import webImg from "./src/backgroundImg/Web 1920 – 2";

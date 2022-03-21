@@ -50,4 +50,28 @@
   &:hover {
     border: 1px solid black;
   }
+
+  h4:hover {
+    color: white;
+  }
+}
+
+@mixin cardArticle-info {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 0.5rem;
+  background: transparent;
+  border-radius: 20px;
+  overflow: scroll;
+  justify-content: center;
+  text-align: center;
+
+  .icon-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
 }

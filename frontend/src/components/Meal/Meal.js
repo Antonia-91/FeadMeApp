@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import PickDate from "../pickDate/PickDate";
 import { NavLink, useParams } from "react-router-dom";
+import { FaYoutube } from "react-icons/fa";
 import Form from "./Form";
 
 const Meal = ({ logedin, todos, setTodos }) => {
   const [meal, setMeal] = useState();
+  const [show, setShow] = useState(true);
+  console.log(show);
 
   // get id from URL
   let { id } = useParams();
@@ -25,12 +29,20 @@ const Meal = ({ logedin, todos, setTodos }) => {
   return (
     <main className="meal-main">
       <header className="meal-header">
+        <div
+          className="meal-header-saved"
+          onClick={() => setShow((prevState) => !prevState)}
+        ></div>
         <h3>{meal.strMeal}</h3>
-        <p>{meal.strCategory}</p>
+        <p>
+          {" "}
+          Category: <span>{meal.strCategory}</span>{" "}
+        </p>
         <a href={meal.strYoutube} target="_blank" rel="nereferrer">
-          <i class="fas fa-eye"></i> whatch Youtube{" "}
+          <FaYoutube /> video Insuctions
         </a>
       </header>
+
       <section className="meal-wrapper">
         <article className="meal-article">
           <img src={meal.strMealThumb} alt={`${meal.strMeal}`} />
@@ -80,6 +92,9 @@ const Meal = ({ logedin, todos, setTodos }) => {
           </article>
         </div>
       </section>
+      <div className={show ? "date-holder" : "hide"}>
+        <PickDate meal={meal.strMeal} />
+      </div>
     </main>
   );
 };

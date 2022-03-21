@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaYoutube } from "react-icons/fa";
+import { FaHeartBroken } from "react-icons/fa";
 
 const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
+
+
   /// add to fav
   const addFav = async (id) => {
     console.log(id);
@@ -86,6 +90,8 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
     }
   };
 
+  //console.log(meals.map((meal) => meal.strMeal.length));
+
   return (
     <>
       {meals.map((meal) => (
@@ -93,16 +99,28 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
           <img src={meal.strMealThumb} alt={`${meal.strMeal}`} />
           <div className="meals-info">
             <NavLink to={`/${meal.idMeal}`}>
-              <h4>{meal.strMeal}</h4>
+              <h4>{meal.strMeal.split(" ", 3)}...</h4>
             </NavLink>
             <>
               {!logedin?.user_favs.includes(meal.idMeal) ? (
-                <i onClick={() => addFav(meal.idMeal)} class="fas fa-heart"></i>
+                <div className="icon-holder">
+                  <a href={meal.strYoutube} target="_blank" rel="nereferrer">
+                    <FaYoutube />
+                  </a>
+                  <i
+                    onClick={() => addFav(meal.idMeal)}
+                    class="fas fa-heart"
+                  ></i>
+                </div>
               ) : (
-                <i
-                  class="fas fa-trash"
-                  onClick={(e) => onRemoveFavorite(meal.idMeal)}
-                ></i>
+                <div className="icon-holder">
+                  <a href={meal.strYoutube} target="_blank" rel="nereferrer">
+                    <FaYoutube />
+                  </a>
+                  <FaHeartBroken
+                    onClick={(e) => onRemoveFavorite(meal.idMeal)}
+                  />
+                </div>
               )}
             </>
           </div>

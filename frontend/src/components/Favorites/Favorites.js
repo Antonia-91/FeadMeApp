@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { FaYoutube } from "react-icons/fa";
+import { FaHeartBroken } from "react-icons/fa";
 
 const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
   console.log("favorites", favorites);
@@ -75,20 +77,27 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
   if (!Favorites) return null;
   return (
     <main className="favorite-main">
-      <h2>My Favorites - {logedin.userName}</h2>
+      <h2>My Favorites</h2>
       <section className="favorite-wrapper">
         {favorites.map((fav) => (
           <article className="favorite-article" key={fav.meals[0].idMeal}>
             <img src={fav.meals[0].strMealThumb} alt="#" />
             <div className="favorite-info">
               <NavLink to={`/${fav.meals[0].idMeal}`}>
-                <h4> {fav.meals[0].strMeal}</h4>
+                <h4> {fav.meals[0].strMeal.split(" ", 3)}...</h4>
               </NavLink>
-
-              <i
-                class="fas fa-trash"
-                onClick={(e) => onRemoveFavorite(fav.meals[0].idMeal)}
-              ></i>
+              <div className="icon-holder">
+                <a
+                  href={fav.meals[0].strYoutube}
+                  target="_blank"
+                  rel="nereferrer"
+                >
+                  <FaYoutube />
+                </a>
+                <FaHeartBroken
+                  onClick={(e) => onRemoveFavorite(fav.meals[0].idMeal)}
+                />
+              </div>
             </div>
           </article>
         ))}
