@@ -4,7 +4,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { FaYoutube } from "react-icons/fa";
 import Form from "./Form";
 
-const Meal = ({ logedin, todos, setTodos }) => {
+const Meal = ({ logedin, todos, setTodos , dates, setDates}) => {
   const [meal, setMeal] = useState();
   const [show, setShow] = useState(true);
   console.log(show);
@@ -93,7 +93,12 @@ const Meal = ({ logedin, todos, setTodos }) => {
         </div>
       </section>
       <div className={show ? "date-holder" : "hide"}>
-        <PickDate meal={meal.strMeal} />
+        <PickDate
+          meal={meal.strMeal}
+          logedin={logedin}
+          dates={dates}
+          setDates={setDates}
+        />
       </div>
     </main>
   );

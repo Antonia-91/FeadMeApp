@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Search from "./components/Search/Search";
 import Shoppinglist from "./components/Shoppinglist/Shoppinglist";
 
-
 import "./css/App.css";
 
 //import webImg from "./src/backgroundImg/Web 1920 – 2";
@@ -20,7 +19,8 @@ function App() {
   const [logedin, setLogedin] = useState();
   const [todos, setTodos] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  console.log(favorites)
+  const [dates, setDates] = useState();
+  //console.log(favorites)
 
   useEffect(() => {
     const getUser = localStorage.getItem("user")
@@ -37,7 +37,11 @@ function App() {
         <Routes>
           <>
             {logedin && (
-              <Route exact path="/" element={<Home logedin={logedin} todos={todos}/>} />
+              <Route
+                exact
+                path="/"
+                element={<Home logedin={logedin} todos={todos} />}
+              />
             )}
             {logedin && (
               <Route
@@ -61,6 +65,8 @@ function App() {
                     setLogedin={setLogedin}
                     todos={todos}
                     setTodos={setTodos}
+                    dates={dates}
+                    setDates={setDates}
                   />
                 }
               />
