@@ -40,7 +40,14 @@ function App() {
               <Route
                 exact
                 path="/"
-                element={<Home logedin={logedin} todos={todos} />}
+                element={
+                  <Home
+                    logedin={logedin}
+                    todos={todos}
+                    dates={dates}
+                    setDates={setDates}
+                  />
+                }
               />
             )}
             {logedin && (

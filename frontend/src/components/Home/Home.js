@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+/// -- images ---///
 import baking from "./images/baking.jpg";
 import breakfast from "./images/breakFast.jpg";
 import brunch from "./images/brekker.jpg";
 import lunch from "./images/lunch.jpg";
 import dinner from "./images/dinner.jpg";
 import listImg from "./images/list.png";
-import { NavLink } from "react-router-dom";
-import moment from "moment";
-
 import bubble from "./images/bubbla.png";
 
-const Home = ({ todos, logedin }) => {
+import moment from "moment"; // use tihs?
+
+const Home = ({ todos, logedin, dates, setDates }) => {
   console.log(logedin);
+  console.log(dates);
 
-  const current = new Date();
-  const date = `${current.getDate()}/${
-    current.getMonth() + 1
-  }/${current.getFullYear()} /${current.getDate()}`;
+  useEffect(() => {
+    const getAllDates = async () => {
+      let idToServer = logedin.user_id;
+      const datesFromServer = await fechAllDates(idToServer);
 
-  // console.log(moment(date).week());
-  // console.log(moment(date).isoWeek());
+      setDates(datesFromServer);
+    };
+    getAllDates();
+  }, [logedin]);
+
+  /// fetch all Dates
+  const fechAllDates = async (id) => {
+    const res = await fetch(`http://localhost:5005/date/${id}`);
+    const data = await res.json();
+
+    return data;
+  };
 
   return (
     <main className="home">
@@ -27,14 +39,17 @@ const Home = ({ todos, logedin }) => {
         <div className="card">
           <div className="card-content">
             <h3 style={{ textTransform: "capitalize" }}>
-              {logedin.userName}s week: - {date}
+              {logedin.userName}s week:
             </h3>
-            <p>WensDay: eggBenedict, go to recepie</p>
-            <p>Friday</p>
-            <p></p>
-            {/* <NavLink className="nav-links" to="/calendar">
-              <h4>Calendar</h4>
-            </NavLink> */}
+            <ul>
+              {/* {dates?.map((date) => (
+                <li key={date.meal_id}>
+                  <NavLink to={`/${date.meal_id}`}>
+                    {date.date} : {date.meal_id}
+                  </NavLink>
+                </li>
+              ))} */}
+            </ul>
           </div>
         </div>
       </section>
@@ -109,3 +124,11 @@ const Home = ({ todos, logedin }) => {
 };
 
 export default Home;
+
+// const current = new Date();
+// const date = `${current.getDate()}/${
+//   current.getMonth() + 1
+// }/${current.getFullYear()} /${current.getDate()}`;
+
+// // console.log(moment(date).week());
+// // console.log(moment(date).isoWeek());
