@@ -58,7 +58,7 @@ const Tasks = ({ todos, setTodos, reminder }) => {
               todo.todoList_reminder ? "reminder todo-info" : "todo-info"
             }`}
           >
-            <h3>{todo.todoList_title}</h3>
+            <p>{todo.todoList_title}</p>
             <FaTimes
               style={{ color: "red", cursor: "pointer" }}
               onClick={() => onDelete(todo.todoList_id)}

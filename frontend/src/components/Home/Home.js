@@ -38,17 +38,17 @@ const Home = ({ todos, logedin, dates, setDates }) => {
       <section className="home-top-section">
         <div className="card">
           <div className="card-content">
-            <h3 style={{ textTransform: "capitalize" }}>
+            <h2 style={{ textTransform: "capitalize" }}>
               {logedin.userName}s week:
-            </h3>
+            </h2>
             <ul>
-              {/* {dates?.map((date) => (
+              {dates?.map((date) => (
                 <li key={date.meal_id}>
                   <NavLink to={`/${date.meal_id}`}>
-                    {date.date} : {date.meal_id}
+                    {date.day} : {date.meal_title}
                   </NavLink>
                 </li>
-              ))} */}
+              ))}
             </ul>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
       <section className="home-middle-section">
         <article className="home-search">
           <div className="home-title">
-            <h3>Explore foods from around the globe.</h3>
+            <h2>Explore foods from around the globe.</h2>
             <p>
               Whether you're looking for healthy recipes, or ideas on how to use
               leftovers from your fridge, we've numerous recipes to choose from,

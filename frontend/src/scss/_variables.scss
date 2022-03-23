@@ -1,13 +1,19 @@
 /// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Licorice&family=Poppins:ital,wght@0,400;0,600;1,500&family=Shadows+Into+Light&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap");
-$font-family: "Poppins", sans-serif;
-$primary-font: "Poppins", sans-serif;
-$detail-font: "Shadows Into Light", cursive;
-$logo-font: "Pushster", cursive;
+$font-headers: "Dancing Script", cursive;
+$font-bread-text: "Poppins", sans-serif;
+// font-family: 'Licorice', cursive;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Shadows Into Light', cursive;
+
+// $font-family: "Poppins", sans-serif;
+// $primary-font: "Poppins", sans-serif;
+// $detail-font: "Shadows Into Light", cursive;
+// $logo-font: "Pushster", cursive;
 
 /// COLORS
-$primary-fontColor: rgb(29, 29, 29);
+$primary-fontColor: rgb(66, 64, 64);
 $orange: rgb(247, 128, 48);
 $yellow: rgb(249, 209, 36);
 $opasityOrnge: rgba(255, 166, 0, 0.26);
@@ -20,7 +26,7 @@ $hover: #ff4e50;
 $box-shadow: 5px 5px 5px #05050598;
 //$left-box-shadow: -5px -5px 5px 5px rgba(0, 0, 0, 0.288);
 $left-box-shadow: -5px -5px 4px 3px rgba(0, 0, 0, 0.349);
-$card-background: rgba(128, 128, 128, 0.5);
+$card-background: rgba(128, 128, 128, 0.616);
 
 $btn-background: -webkit-gradient(
   linear,

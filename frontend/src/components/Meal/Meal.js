@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PickDate from "../pickDate/PickDate";
 import { NavLink, useParams } from "react-router-dom";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaCalendar } from "react-icons/fa";
 import Form from "./Form";
 
-const Meal = ({ logedin, todos, setTodos , dates, setDates}) => {
+const Meal = ({ logedin, todos, setTodos, dates, setDates }) => {
   const [meal, setMeal] = useState();
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   console.log(show);
 
   // get id from URL
@@ -32,9 +32,11 @@ const Meal = ({ logedin, todos, setTodos , dates, setDates}) => {
         <div
           className="meal-header-saved"
           onClick={() => setShow((prevState) => !prevState)}
-        ></div>
-        <h3>{meal.strMeal}</h3>
-        <p>
+        >
+          <FaCalendar />
+        </div>
+        <p className="first">{meal.strMeal}</p>
+        <p className="second">
           {" "}
           Category: <span>{meal.strCategory}</span>{" "}
         </p>

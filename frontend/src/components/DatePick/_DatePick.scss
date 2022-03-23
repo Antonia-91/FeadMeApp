@@ -1,9 +1,13 @@
 .date-holder {
   position: absolute;
   top: 200px;
-  right: 100px;
+  right: 70px;
   transition: transform 1s;
   transition: ease-in all 2s;
+  background-color: $card-background;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: $left-box-shadow;
   // transform: translateX(200%);
 }
 
