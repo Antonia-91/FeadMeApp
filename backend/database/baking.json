@@ -1,0 +1,49 @@
+[
+  {
+    "idMeal": "1",
+    "title": "Lovely vanilla squares in a frying pan",
+    "ingredients": [
+      "500 g butter",
+      "10 dl wheat flour",
+      " 4 dl caster sugar",
+      "4 tablespoons vanilla sugar",
+      "1 tablespoon baking powder",
+      "4 eggs",
+      "2 dl kesella or quark 10%",
+      " 5 dl crème fraiche, optional fat content",
+      "3 dl caster sugar",
+      "1 tablespoon vanilla sugar"
+    ],
+    "strInstructions": "Set the oven to 200 °. 2. Crumble dough: Quickly work together butter, flour, sugar, vanilla sugar and baking powder into a crumbly dough in a food processor. Run the dough in two batches if you have a small food processor. Press half of the shortcrust pastry into a long pan, approx. 30x40 cm, with parchment paper. 4. Filling: Mix eggs, kesella, crème fraiche, sugar and vanilla sugar. Spread the filling on top of the shortcrust pastry in the frying pan. Crumble the rest of the dough on top of the filling. 5. Bake in the middle of the oven for about 30 minutes. Allow to cool and then cut into squares. 6. Garnish: Sift icing sugar just before serving.",
+
+    "strMealThumb": "https://images.recept.se/images/recipes/ljuvliga-vaniljrutor-i-langpanna_7421.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.5&fp-y=0.45612981465765&fp-z=1&w=800&h=570&auto=format",
+    "Energi": "1042 kJ (249 kcal)",
+    "Fat": "15,1 g",
+    "carbohydrate": "26 g",
+    "Protein": "3 g",
+    "The recipe contains": ["Gluten", "Egg", "Lactose", "Milk protein"]
+  },
+  {
+    "idMeal": "2",
+    "title": "Smoothie cookies with melted chocolate",
+    "ingredients": [
+      "2 eggs",
+      "3 dl caster sugar",
+      "  1 teaspoon vanilla sugar",
+      "  1 dl cocoa",
+      " 1½ dl wheat flour",
+      "  125 g melted butter",
+      "  100 g melted chocolate - some raspberries or optional berries",
+      "  sprinkles, eg pastel pearls from odense",
+      "  fresh mint"
+    ],
+    "strInstructions": "1. Cover a form with parchment paper, approx. 1 1/2 liters, approx. 20x20 cm in size. Stir together eggs and sugar (do not beat). Mix together all the dry ingredients and sift into the egg batter interspersed with melted butter. Stir to a smooth batter and pour into the mold. Bake the cake at 175 ° for 25-30 minutes. Let cool in the mold. 4. Lift the cake and cut into small squares and place on a platter. Drizzle over melted chocolate. Garnish with berries, sprinkles and mint, and serve with whipped cream.",
+
+    "strMealThumb": "https://images.recept.se/images/recipes/ror-ihop-kladdkaka_1441.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.49962288214038&fp-y=0.40459534182306&fp-z=1.25&w=279&h=279&dpr=1&auto=format",
+    "Energi": "521 kJ (125 kcal)",
+    "Fat": "6,3 g",
+    "carbohydrate": "15,5 g",
+    "Protein": "1,6 g",
+    "The recipe contains": ["Gluten", "Egg", "Lactose", "Milk protein"]
+  }
+]

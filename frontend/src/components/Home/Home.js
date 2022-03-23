@@ -11,9 +11,9 @@ import bubble from "./images/bubbla.png";
 
 import moment from "moment"; // use tihs?
 
-const Home = ({ todos, logedin, dates, setDates }) => {
-  console.log(logedin);
-  console.log(dates);
+const Home = ({ todos, logedin, dates, setDates, setCategory }) => {
+  //console.log(logedin);
+  //console.log(dates);
 
   useEffect(() => {
     const getAllDates = async () => {
@@ -31,6 +31,15 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     const data = await res.json();
 
     return data;
+  };
+
+  //// fetchBrekker
+  const fetchCategory = async (id) => {
+    console.log(id);
+    const res = await fetch(`http://localhost:5005/${id}`);
+    const data = await res.json();
+    console.log(data);
+    setCategory(data);
   };
 
   return (
@@ -73,46 +82,69 @@ const Home = ({ todos, logedin, dates, setDates }) => {
         </article>
       </section>
 
-      <div className="category-wrapper">
-        <article className="category-article">
-          <img
-            src={brunch}
-            width="200"
-            height="200"
-            alt="avocado sandwish"
-            style={{ borderRadius: "20px" }}
-          />
-        </article>
+      <section className="category-wrapper">
+        <NavLink className="nav-links" to="/breakfast">
+          <article
+            className="category-article"
+            onClick={(e) => fetchCategory(e.target.id)}
+          >
+            <img
+              id="breakfast"
+              src={brunch}
+              width="200"
+              height="200"
+              alt="avocado sandwish"
+              style={{ borderRadius: "20px" }}
+            />
+          </article>
+        </NavLink>
 
-        <article className="category-article">
-          <img
-            src={lunch}
-            width="200"
-            height="200"
-            alt="spagetti and tomato dish"
-            style={{ borderRadius: "20px" }}
-          />
-        </article>
-        <article className="category-article">
-          <img
-            src={dinner}
-            width="200"
-            height="200"
-            alt="bown with shripms"
-            style={{ borderRadius: "20px" }}
-          />
-        </article>
-
-        <article className="category-article">
-          <img
-            src={baking}
-            width="200"
-            height="200"
-            alt="choklet"
-            style={{ borderRadius: "20px" }}
-          />
-        </article>
-      </div>
+        <NavLink className="nav-links" to="/lunch">
+          <article
+            className="category-article"
+            onClick={(e) => fetchCategory(e.target.id)}
+          >
+            <img
+              id="lunch"
+              src={lunch}
+              width="200"
+              height="200"
+              alt="spagetti and tomato dish"
+              style={{ borderRadius: "20px" }}
+            />
+          </article>
+        </NavLink>
+        <NavLink className="nav-links" to="/dinner">
+          <article
+            className="category-article"
+            onClick={(e) => fetchCategory(e.target.id)}
+          >
+            <img
+              id="dinner"
+              src={dinner}
+              width="200"
+              height="200"
+              alt="bown with shripms"
+              style={{ borderRadius: "20px" }}
+            />
+          </article>
+        </NavLink>
+        <NavLink className="nav-links" to="/baking">
+          <article
+            className="category-article"
+            onClick={(e) => fetchCategory(e.target.id)}
+          >
+            <img
+              id="baking"
+              src={baking}
+              width="200"
+              height="200"
+              alt="choklet"
+              style={{ borderRadius: "20px" }}
+            />
+          </article>
+        </NavLink>
+      </section>
       <div className="bubbles">
         <img src={bubble} alt="" />
         <img src={bubble} alt="" />

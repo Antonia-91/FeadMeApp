@@ -9,7 +9,7 @@
 @import "../components/Favorites/Favorites.scss";
 @import "../components/Shoppinglist/Shoppinglist.scss";
 @import "../components/DatePick/DatePick";
-
+@import "../components/Home/Baking/Baking";
 //@import "../src/backgroundImg/web.jpg";
 * {
   box-sizing: border-box;
@@ -20,9 +20,12 @@ body {
   color: $primary-fontColor;
   font-family: $font-bread-text;
 
-   h1, h2, h3, h4{
-    font-family:$font-headers;
-   }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $font-headers;
+  }
 }
 
 .App {

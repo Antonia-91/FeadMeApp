@@ -8,7 +8,10 @@ import Meal from "./components/Meal/Meal";
 import Navbar from "./components/Navbar/Navbar";
 import Search from "./components/Search/Search";
 import Shoppinglist from "./components/Shoppinglist/Shoppinglist";
-
+import Brekker from "./components/Home/Brekker/Brekker";
+import Lunch from "./components/Home/Lunch/Lunch";
+import Dinner from "./components/Home/Dinner/Dinner";
+import Baking from "./components/Home/Baking/Baking";
 import "./css/App.css";
 
 //import webImg from "./src/backgroundImg/Web 1920 – 2";
@@ -20,6 +23,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [dates, setDates] = useState();
+  const [category, setCategory] = useState();
   //console.log(favorites)
 
   useEffect(() => {
@@ -46,9 +50,26 @@ function App() {
                     todos={todos}
                     dates={dates}
                     setDates={setDates}
+                    category={category}
+                    setCategory={setCategory}
                   />
                 }
               />
+            )}
+            {logedin && (
+              <Route
+                path="/breakfast"
+                element={<Brekker category={category} />}
+              />
+            )}
+            {logedin && (
+              <Route path="/lunch" element={<Lunch category={category} />} />
+            )}
+            {logedin && (
+              <Route path="/dinner" element={<Dinner category={category} />} />
+            )}
+            {logedin && (
+              <Route path="/baking" element={<Baking category={category} />} />
             )}
             {logedin && (
               <Route

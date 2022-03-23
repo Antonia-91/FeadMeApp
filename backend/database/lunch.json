@@ -1,0 +1,24 @@
+[
+  {
+    "idMeal": "1",
+    "strIngredient1": "Chicken Stock",
+    "strIngredient2": "Salt",
+    "strIngredient3": "Sugar",
+    "strIngredient4": "Pepper",
+    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
+
+    "strMeal": "Egg Drop Soup",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+  },
+  {
+    "idMeal": "2",
+    "strIngredient1": "Egg Noodle",
+    "strIngredient2": "Salt",
+    "strIngredient3": "Sugar",
+    "strIngredient4": "Pepper",
+    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
+
+    "strMeal": "Egg Drop Soup",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+  }
+]

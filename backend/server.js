@@ -8,8 +8,11 @@ const mysql = require("mysql2");
 const userRouter = require("./routes/user.js");
 const favoritesRouter = require("./routes/favorites.js");
 const todoRouter = require("./routes/todo.js");
-const dateRouter = require("./routes/date.js")
-
+const dateRouter = require("./routes/date.js");
+const breakfastRouter = require("./routes/breakfast.js");
+const lunchRouter = require("./routes/lunch.js");
+const dinnerRouter = require("./routes/dinner.js");
+const bakingRouter = require("./routes/baking.js");
 
 /// Enables CORS
 const cors = require("cors");
@@ -30,8 +33,11 @@ app.use(
 app.use(userRouter);
 app.use(favoritesRouter);
 app.use(todoRouter);
-app.use(dateRouter)
-
+app.use(dateRouter);
+app.use(breakfastRouter);
+app.use(lunchRouter);
+app.use(dinnerRouter);
+app.use(bakingRouter);
 
 /// connect to database
 app.locals.con = mysql.createConnection({
