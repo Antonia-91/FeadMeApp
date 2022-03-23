@@ -1,24 +1,67 @@
 [
   {
-    "idMeal": "1",
-    "strIngredient1": "Chicken Stock",
-    "strIngredient2": "Salt",
-    "strIngredient3": "Sugar",
-    "strIngredient4": "Pepper",
-    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
-
-    "strMeal": "Egg Drop Soup",
-    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+    "idMeal": "d1",
+    "title": "Halloumi burger with red onion jam",
+    "ingredients": {
+      "Ingredients": [
+        "200 g halloumi",
+        " 1 teaspoon butter for frying",
+        "1 large tomato",
+        "2 coarse hamburger breads of 60 g",
+        "green salad"
+      ],
+      "Red onion jam": [
+        "1 red onion",
+        "½ tablespoons butter for frying",
+        "1 clove of garlic",
+        "½ dl water",
+        "1 tablespoon brown sugar",
+        "1 tablespoon vinegar"
+      ]
+    },
+    "strInstructions": "Red onion marmalade: Peel and slice the onion and fry it slowly in the butter with finely chopped garlic. Add the remaining ingredients and simmer slowly until the liquid has boiled. Divide the halloumi into two halves. Grill or fry the halloumi to a nice color. Slice the tomato, grill or toast the breads. Combine burgers with bread, salad, tomato, halloumi and red onion jam.",
+    "strMealThumb": "https://images.recept.se/images/recipes/halloumiburgare-med-rodloksmarmelad_12490.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.49953758110434&fp-y=0.54094781390691&fp-z=1.093384191793&w=279&h=279&dpr=1&auto=format",
+    "Energi": "2516 kJ (601 kcal)",
+    "Fat": "35 g",
+    "carbohydrate": "44,8 g",
+    "Protein": "28,5 g",
+    "The recipe contains": ["Gluten", "Lactose"]
   },
   {
-    "idMeal": "2",
-    "strIngredient1": "Egg Noodle",
-    "strIngredient2": "Salt",
-    "strIngredient3": "Sugar",
-    "strIngredient4": "Pepper",
-    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
+    "idMeal": "d2",
+    "title": "Pizza pie with milled squash and herbs",
+    "ingredients": {
+      "Ingredients": [
+        " 1 finished pizza dough, eg for sourdough pizza (400 g)",
+        "live oil to the mold"
+      ],
+      "Filling": [
+        "325 / 5 000",
+        "Översättningsresultat",
+        "1 large squash",
+        "1 red onion",
+        " 2 cloves garlic",
+        "1 tablespoon olive oil for frying",
+        "1 dl chopped mixed fresh herbs, eg fresh basil"
+      ],
+      "parsley and fresh thyme": [
+        "salt",
+        "black pepper",
+        "  100 g natural cream cheese",
+        "1 egg yolk",
+        " 1 dl grated aged cheese, 31%, eg Västerbotten cheese",
+        " 2 dl grated mozzarella cheese"
+      ],
+      "Garnish": ["olive oil", "fresh basil"]
+    },
 
-    "strMeal": "Egg Drop Soup",
-    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+    "strInstructions": ". Set the oven to 220 °. Grease a round, low and pleated pie tin with oil. Pull out the dough (if it is not already rolled out) with lightly floured fingers to a round dough plate, which is slightly larger than the mold. Put the dough in the mold so that the dough goes up on the edge. Filling: Divide the squash lengthwise into four. Cut the lengths into slices. Peel a squash, grate it and squeeze the juice. Peel and finely chop the garlic. Heat the oil in a frying pan. Fry squash and red onion until softened and slightly colored. Add the garlic and remove from the heat. Turn the herbs over and season with salt and pepper. Whisk the cream cheese with the egg yolk. Spread on the pizza dough in the mold. Sprinkle over the stored cheese. 4. Distribute the vegetables in the mold and sprinkle over the mozzarella. Bake in the middle of the oven for 15-20 minutes. Drizzle over a little oil and garnish with basil leaves.",
+
+    "strMealThumb": "https://images.recept.se/images/recipes/pizzapaj-med-frast-squash-och-orter_17304.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.53361645818273&fp-y=0.50355863997775&fp-z=1.2769265868307&w=279&h=279&dpr=1&auto=format",
+    "Energi": "2836 kJ (678 kcal)",
+    "Fat": "34,3 g",
+    "carbohydrate": "49,3 g",
+    "Protein": "29,8 g",
+    "The recipe contains": ["Gluten", "Egg", "Lactose"]
   }
 ]

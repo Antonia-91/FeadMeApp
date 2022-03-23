@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Meals from "../Meals.js";
 
 const Lunch = () => {
   const [category, setCategory] = useState();
+ 
 
   useEffect(() => {
     fetchCategory();
@@ -10,29 +12,20 @@ const Lunch = () => {
 
   //// fetchBrekker
   const fetchCategory = async () => {
-    const res = await fetch(`http://localhost:5005/baking`);
+    const res = await fetch(`http://localhost:5005/lunch`);
     const data = await res.json();
-    console.log(data.baking);
-    setCategory(data.baking);
+    console.log(data.lunch);
+    setCategory(data.lunch);
   };
   console.log(category);
   if (!{ category }) return;
 
   return (
-    <main className="baking-main">
-      <h2>Lunch</h2>
-      <section className="meals-wrapper">
-        {category?.map((meal) => (
-          <article className="meals-article" key={meal.idMeal}>
-            <img src={meal.strMealThumb} />
-            <div className="meals-info">
-              <NavLink to={`/category/${meal.idMeal}`}>
-                <h4>{meal.title.split(" ", 3)}...</h4>
-              </NavLink>
-            </div>
-          </article>
-        ))}
-      </section>
+    <main>
+      <header>
+        <h2>Lunch</h2>
+      </header>
+      <Meals category={category} />
     </main>
   );
 };

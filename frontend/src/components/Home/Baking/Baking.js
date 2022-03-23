@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Meals from "../Meals.js";
 
 const Baking = () => {
   const [category, setCategory] = useState();
@@ -18,20 +19,11 @@ const Baking = () => {
   console.log(category);
   if (!{ category }) return;
   return (
-    <main className="baking-main">
-      <h2>Baking</h2>
-      <section className="meals-wrapper">
-        {category?.map((meal) => (
-          <article className="meals-article" key={meal.idMeal}>
-            <img src={meal.strMealThumb} />
-            <div className="meals-info">
-              <NavLink to={`/category/${meal.idMeal}`}>
-                <h4>{meal.title.split(" ", 3)}...</h4>
-              </NavLink>
-            </div>
-          </article>
-        ))}
-      </section>
+    <main>
+      <header>
+        <h2>Baking</h2>
+      </header>
+      <Meals category={category} />
     </main>
   );
 };

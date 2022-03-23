@@ -1,24 +1,70 @@
 [
   {
-    "idMeal": "1",
-    "strIngredient1": "Chicken Stock",
-    "strIngredient2": "Salt",
-    "strIngredient3": "Sugar",
-    "strIngredient4": "Pepper",
-    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
+    "idMeal": "b1",
+    "title": "Pancake muffins with spinach and feta cheese",
+    "ingredients": [
+      " 60 g baby spinach",
+      " 75 g feta cheese",
+      "butter",
+      "3 dl wheat flour",
+      "Salt tsp salt",
+      "5 dl milk",
+      "4 eggs",
+      "baby spinach or spice green"
+    ],
+    "strInstructions": "Oven 225 °. 2. Groom the spinach. Mash the feta cheese with a fork. Fry the spinach in butter without it taking on too much color. Strain off excess liquid. 3. Grease a muffin tin with butter and flour it a little. Mix wheat flour and salt in a bowl. Whisk the milk a little at a time. Whisk the eggs one at a time and mix to a lump-free batter. 4. Pour a little batter into each depression in the tin. Then divide the spinach and mashed feta cheese in each. Pour on the remaining batter. Bake just below the middle of the oven for 15-20 minutes. 5. Garnish with spinach leaves or spicy greens.",
 
-    "strMeal": "Egg Drop Soup",
-    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+    "strMealThumb": "https://images.recept.se/images/recipes/pannkaksmuffins-med-spenat-och-fetaost_21378.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.47591321391374&fp-y=0.5280054088933&fp-z=1.25&w=279&h=279&dpr=1&auto=format",
+    "Energi": "470 kJ (112 kcal)",
+    "Fat": "3,9 g",
+    "carbohydrate": "12,8 g",
+    "Protein": "6,3 g",
+    "The recipe contains": ["Gluten", "Egg", "Lactose"]
   },
   {
-    "idMeal": "2",
-    "strIngredient1": "Egg Noodle",
-    "strIngredient2": "Salt",
-    "strIngredient3": "Sugar",
-    "strIngredient4": "Pepper",
-    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
+    "idMeal": "b2",
+    "title": "English muffins with eggs royale",
+    "ingredients": {
+      "English muffins": [
+        "25 g yeast",
+        "4 dl milk",
+        "50 g butter",
+        "2 teaspoons salt",
+        "2 tablespoons powdered sugar",
+        "1 teaspoon baking powder",
+        "10 dl wheat flour",
+        "½ dl polenta"
+      ],
+      "Poached eggs": [
+        "1½ liters of water",
+        " 1 tablespoon vinegar 12%",
+        "4 eggs"
+      ],
 
-    "strMeal": "Egg Drop Soup",
-    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+      "Hollandaise sauce": [
+        "100 g butter",
+        "2 egg yolks",
+        "1 tablespoon water",
+        "1 tablespoon squeezed lemon juice",
+        "salt",
+        "cayenne pepper Spinach",
+        "200 g fresh spinach",
+        "1 tablespoon butter",
+        "salt and pepper",
+        "4 slices cold-smoked salmon"
+      ]
+    },
+    "strInstructions": {
+      "English muffins": "1. Crumble the yeast in a dough bowl. Heat the milk to 37 °. Pour the milk over the yeast and stir until the yeast dissolves. 2. Add the butter in pieces. Add salt, sugar, baking powder and flour. Work the dough well in the machine. Cover the bowl with plastic wrap and leave the dough to rise, 45 minutes. 3. Take the dough on a floured baking sheet and roll it out into a plate that is about 11/2 cm thick. Take out rounds that are about 7 cm in diameter. Brush them with water and turn them into polenta. Place the muffins on a sheet of parchment paper and leave to rise under a baking sheet for 40 minutes. 4. Fry the muffins on low heat in a lightly greased frying pan, 7 minutes per side. Serve them freshly baked or roasted. Divide them with a fork. 5. Here we fry the muffins in a frying pan, but you can also bake them in the oven at 250 ° for 15 minutes.",
+      "Poached eggs": "Boil water and vinegar in a saucepan. Crack the eggs, one at a time, into a cup and let the egg slide into the water. Simmer for 4 minutes. Pick up the egg with a slotted spoon and let it drain. Trim any bumps around the egg",
+      "Hollandaise sauce": "Melt the butter in a saucepan and set aside. Mix egg yolks and water in a bowl and place the bowl over a saucepan of boiling water. Whisk constantly until the egg mixture thickens. Place the bowl on the counter and add the butter in a thin stream while stirring. Do not bring the cloudy base kit. Taste the sauce with lemon juice, salt and cayenne pepper."
+    },
+
+    "strMealThumb": "https://images.recept.se/images/recipes/engelska-muffins-med-eggs-royale_20526.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.5&fp-y=0.63052927093683&fp-z=1&w=279&h=279&dpr=1&auto=format",
+    "Energi": "1568 kJ (375 kcal)",
+    "Fat": "16,5 g",
+    "carbohydrate": "42,9 g",
+    "Protein": "11,4 g",
+    "The recipe contains": ["Lactose", "Gluten", "Egg", "Fish"]
   }
 ]

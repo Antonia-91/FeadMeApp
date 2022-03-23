@@ -1,24 +1,71 @@
 [
   {
-    "idMeal": "1",
-    "strIngredient1": "Chicken Stock",
-    "strIngredient2": "Salt",
-    "strIngredient3": "Sugar",
-    "strIngredient4": "Pepper",
-    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
+    "idMeal": "l1",
+    "title": "Chicken salad with mango and black rice",
+    "ingredients": {
+      "ingredients": [
+        "1 grilled chicken",
+        "1 dl black rice",
+        "4 green onions",
+        "2 mature mangoes",
+        "1 scoop of mozzarella cheese",
+        "10 dl mixed salad",
+        "olive oil",
+        "the juice from 1/2 lemons",
+        "20 black olives",
+        "1 dl capers",
+        "salt and pepper"
+      ],
+      "Sauce": [
+        "2 dl matyoghurt",
+        "1 clove of garlic",
+        "1 tablespoon liquid honey",
+        " 1 tablespoon olive oil",
+        " 2 teaspoons lemon juice"
+      ]
+    },
+    "strInstructions": "Clean the meat from the bones of the chicken and then cut into smaller pieces. 2. Boil the rice according to the instructions on the package. 3. Cut the green onion thinly. Peel a squash, grate it and cut it into cubes. Cut the mozzarella into equal cubes. 4. Mix the salad with a little olive oil and lemon juice and place on a serving platter. Spread all the ingredients on top of the salad. Season with a little salt and pepper. 5. Sauce: Mix the yoghurt with crushed garlic, honey, olive oil and lemon juice. 6. Drizzle the sauce over the salad and serve with a good loaf of bread.",
 
-    "strMeal": "Egg Drop Soup",
-    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+    "strMealThumb": "https://images.recept.se/images/recipes/kycklingsallad-med-mango-och-svart-ris_3541.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.53299420349122&fp-y=0.55858852957431&fp-z=1.1006414249055&w=279&h=279&dpr=1&auto=format",
+    "Energi": "3497 kJ (836 kcal)",
+    "Fat": "47, g",
+    "carbohydrate": "42 g",
+    "Protein": "59,4 g",
+    "The recipe contains": ["Egg"]
   },
   {
-    "idMeal": "2",
-    "strIngredient1": "Egg Noodle",
-    "strIngredient2": "Salt",
-    "strIngredient3": "Sugar",
-    "strIngredient4": "Pepper",
-    "strInstructions": "In a wok add chicken broth and wait for it to boil.\r\nNext add salt, sugar, white pepper, sesame seed oil.\r\nWhen the chicken broth is boiling add the vegetables to the wok.\r\nTo thicken the sauce, whisk together 1 Tablespoon of cornstarch and 2 Tablespoon of water in a bowl and slowly add to your soup until it's the right thickness.\r\nNext add 1 egg slightly beaten with a knife or fork and add it to the soup slowly and stir for 8 seconds\r\nServe the soup in a bowl and add the green onions on top.",
+    "idMeal": "l2",
+    "title": "Shrimp pie with curry and dill sauce",
+    "ingredients": {
+      "dough": ["125 g butter", "3 dl wheat flour", "2 tablespoons water"],
+      "Filling": [
+        "100 g shrimp in layers",
+        "100 g sliced mushrooms",
+        " 1 pressed clove of garlic",
+        "1 tablespoon butter",
+        "4 eggs",
+        "3 dl cream",
+        "Salt tsp salt",
+        "1 cream cayenne pepper",
+        "150 g grated aged cheese, 31%, 3 dl",
+        "10 g baby spinach"
+      ],
+      "Sauce": [
+        " 3 dl sour cream",
+        "  1 dl mayonnaise",
+        "  2 teaspoons curry",
+        " 1 tablespoon tomato puree",
+        " 2 tablespoons chopped dill",
+        " 2 krm salt"
+      ]
+    },
+    "strInstructions": "Mix the pie dough in a food processor. Roll out the dough and place in a 24 cm large pie tin. Notch the bottom with a fork. Place in the fridge for 20 minutes. Pre-bake the pie crust for about 10 minutes, at 200 °. Mix the sauce. Let the prawns drain. Fry the mushrooms with garlic in butter. Whisk eggs and cream. Add salt and cayenne pepper. 5. Add cheese and spinach to the pie crust. Pour over the filling and sprinkle over the drained prawns. Bake for about 40 minutes until the pie has set. 6. Peel the prawns for garnish and garnish the pie. Serve with the sauce.",
 
-    "strMeal": "Egg Drop Soup",
-    "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg"
+    "strMealThumb": "https://images.recept.se/images/recipes/rakpaj-med-curry-dillsas_640.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.50257727087066&fp-y=0.64756264005389&fp-z=1.7371506357401&w=279&h=279&dpr=1&auto=format",
+    "Energi": "5245 kJ (1254 kcal)",
+    "Fat": "94,2 g",
+    "carbohydrate": "40,8 g",
+    "Protein": "60,3 g",
+    "The recipe contains": ["Gluten", "Egg", "Lactose", "Seafood"]
   }
 ]

@@ -10,6 +10,6 @@ console.log("data", data);
 
 /// get all meals data 
 router.get("/breakfast", (req, res) => {
- res.json({breackfast: JSON.parse(data)})
+ res.json({breakfast: JSON.parse(data)})
 })
 module.exports = router;
