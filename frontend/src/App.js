@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DatePick from "./components/DatePick/DatePick";
+//import DatePick from "./components/DatePick/DatePick";
 import Favorites from "./components/Favorites/Favorites";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -12,6 +12,7 @@ import Brekker from "./components/Home/Brekker/Brekker";
 import Lunch from "./components/Home/Lunch/Lunch";
 import Dinner from "./components/Home/Dinner/Dinner";
 import Baking from "./components/Home/Baking/Baking";
+import CategoryMeal from "./components/Home/CategoryMeal/CategoryMeal";
 import "./css/App.css";
 
 //import webImg from "./src/backgroundImg/Web 1920 – 2";
@@ -23,7 +24,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [dates, setDates] = useState();
-  const [category, setCategory] = useState();
+  //  const [category, setCategory] = useState();
   //console.log(favorites)
 
   useEffect(() => {
@@ -50,26 +51,16 @@ function App() {
                     todos={todos}
                     dates={dates}
                     setDates={setDates}
-                    category={category}
-                    setCategory={setCategory}
                   />
                 }
               />
             )}
+            {logedin && <Route path="/breakfast" element={<Brekker />} />}
+            {logedin && <Route path="/lunch" element={<Lunch />} />}
+            {logedin && <Route path="/dinner" element={<Dinner />} />}
+            {logedin && <Route path="/baking" element={<Baking />} />}
             {logedin && (
-              <Route
-                path="/breakfast"
-                element={<Brekker category={category} />}
-              />
-            )}
-            {logedin && (
-              <Route path="/lunch" element={<Lunch category={category} />} />
-            )}
-            {logedin && (
-              <Route path="/dinner" element={<Dinner category={category} />} />
-            )}
-            {logedin && (
-              <Route path="/baking" element={<Baking category={category} />} />
+              <Route path="/category/:id" element={<CategoryMeal />} />
             )}
             {logedin && (
               <Route

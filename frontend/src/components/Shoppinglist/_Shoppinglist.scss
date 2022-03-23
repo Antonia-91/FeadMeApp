@@ -14,14 +14,13 @@
   justify-content: space-between;
 }
 
-.reminder h3 {
+.reminder p {
   text-decoration: line-through;
 }
 
 .add-form {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .todo-content {
@@ -52,7 +51,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    
   }
 
   .todo-content {

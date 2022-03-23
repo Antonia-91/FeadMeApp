@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
-const Baking = ({ category }) => {
+const Baking = () => {
+  const [category, setCategory] = useState();
+
+  useEffect(() => {
+    fetchCategory();
+  }, []);
+
+  //// fetchBrekker
+  const fetchCategory = async () => {
+    const res = await fetch(`http://localhost:5005/baking`);
+    const data = await res.json();
+    console.log(data.baking);
+    setCategory(data.baking);
+  };
   console.log(category);
+  if (!{ category }) return;
   return (
     <main className="baking-main">
       <h2>Baking</h2>
-      <section className="baking-wrapper">
-        {/* {category.baking?.map((meal) => {
-          <article className="maels-article" key={meal.id}>
-            <h2>{meal.title}</h2>
-          </article>;
-        })} */}
+      <section className="meals-wrapper">
+        {category?.map((meal) => (
+          <article className="meals-article" key={meal.idMeal}>
+            <img src={meal.strMealThumb} />
+            <div className="meals-info">
+              <NavLink to={`/category/${meal.idMeal}`}>
+                <h4>{meal.title.split(" ", 3)}...</h4>
+              </NavLink>
+            </div>
+          </article>
+        ))}
       </section>
     </main>
   );

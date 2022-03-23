@@ -11,7 +11,7 @@ import bubble from "./images/bubbla.png";
 
 import moment from "moment"; // use tihs?
 
-const Home = ({ todos, logedin, dates, setDates, setCategory }) => {
+const Home = ({ todos, logedin, dates, setDates }) => {
   //console.log(logedin);
   //console.log(dates);
 
@@ -33,14 +33,14 @@ const Home = ({ todos, logedin, dates, setDates, setCategory }) => {
     return data;
   };
 
-  //// fetchBrekker
-  const fetchCategory = async (id) => {
-    console.log(id);
-    const res = await fetch(`http://localhost:5005/${id}`);
-    const data = await res.json();
-    console.log(data);
-    setCategory(data);
-  };
+  // //// fetchBrekker
+  // const fetchCategory = async (id) => {
+  //   console.log(id);
+  //   const res = await fetch(`http://localhost:5005/${id}`);
+  //   const data = await res.json();
+  //   console.log(data);
+  //   setCategory(data);
+  // };
 
   return (
     <main className="home">
@@ -83,10 +83,10 @@ const Home = ({ todos, logedin, dates, setDates, setCategory }) => {
       </section>
 
       <section className="category-wrapper">
-        <NavLink className="nav-links" to="/breakfast">
+        <NavLink className="nav-links" to="/breakfast/">
           <article
             className="category-article"
-            onClick={(e) => fetchCategory(e.target.id)}
+            // onClick={(e) => fetchCategory(e.target.id)}
           >
             <img
               id="breakfast"
@@ -102,7 +102,7 @@ const Home = ({ todos, logedin, dates, setDates, setCategory }) => {
         <NavLink className="nav-links" to="/lunch">
           <article
             className="category-article"
-            onClick={(e) => fetchCategory(e.target.id)}
+            // onClick={(e) => fetchCategory(e.target.id)}
           >
             <img
               id="lunch"
@@ -117,7 +117,7 @@ const Home = ({ todos, logedin, dates, setDates, setCategory }) => {
         <NavLink className="nav-links" to="/dinner">
           <article
             className="category-article"
-            onClick={(e) => fetchCategory(e.target.id)}
+            //onClick={(e) => fetchCategory(e.target.id)}
           >
             <img
               id="dinner"
@@ -132,7 +132,7 @@ const Home = ({ todos, logedin, dates, setDates, setCategory }) => {
         <NavLink className="nav-links" to="/baking">
           <article
             className="category-article"
-            onClick={(e) => fetchCategory(e.target.id)}
+            // onClick={(e) => fetchCategory(e.target.id)}
           >
             <img
               id="baking"

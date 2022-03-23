@@ -42,7 +42,7 @@ const Tasks = ({ todos, setTodos, reminder }) => {
     await fetch(`http://localhost:5005/todo/${id}`, {
       method: "DELETE",
     });
-    setTodos(todos.filter((todo) => todo.todoList_id != id));
+    setTodos(todos.filter((todo) => todo.todoList_id !== id));
   };
 
   return (
