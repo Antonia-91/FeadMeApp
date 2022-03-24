@@ -1,11 +1,5 @@
 .search-main {
-  z-index: 2;
-  width: 100vw;
-  height: auto;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  @include main;
 
   .seach-section {
     //position: relative;

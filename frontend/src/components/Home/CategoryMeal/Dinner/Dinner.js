@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Meals from "../Meals.js";
 
-const Lunch = () => {
+const Dinner = () => {
   const [category, setCategory] = useState();
- 
 
   useEffect(() => {
     fetchCategory();
@@ -12,22 +11,22 @@ const Lunch = () => {
 
   //// fetchBrekker
   const fetchCategory = async () => {
-    const res = await fetch(`http://localhost:5005/lunch`);
+    const res = await fetch(`http://localhost:5005/dinner`);
     const data = await res.json();
-    console.log(data.lunch);
-    setCategory(data.lunch);
+    console.log(data.dinner);
+    setCategory(data.dinner);
   };
   console.log(category);
   if (!{ category }) return;
 
   return (
-    <main>
+    <main className="home-main">
       <header>
-        <h2>Lunch</h2>
+        <h2>Dinner</h2>
       </header>
       <Meals category={category} />
     </main>
   );
 };
 
-export default Lunch;
+export default Dinner;

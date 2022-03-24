@@ -67,6 +67,7 @@ const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
 
   return (
     <main className="shoppinglist-main">
+      <h2>My shoppinglist</h2>
       <form className="add-form" onSubmit={onSubmit}>
         <div className="form-control">
           <input

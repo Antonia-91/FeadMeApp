@@ -8,10 +8,10 @@ import Meal from "./components/Meal/Meal";
 import Navbar from "./components/Navbar/Navbar";
 import Search from "./components/Search/Search";
 import Shoppinglist from "./components/Shoppinglist/Shoppinglist";
-import Brekker from "./components/Home/Brekker/Brekker";
-import Lunch from "./components/Home/Lunch/Lunch";
-import Dinner from "./components/Home/Dinner/Dinner";
-import Baking from "./components/Home/Baking/Baking";
+import Brekker from "./components/Home/CategoryMeal/Brekker/Brekker";
+import Lunch from "./components/Home/CategoryMeal/Lunch/Lunch";
+import Dinner from "./components/Home/CategoryMeal/Dinner/Dinner";
+import Baking from "./components/Home/CategoryMeal/Baking/Baking";
 import CategoryMeal from "./components/Home/CategoryMeal/CategoryMeal";
 import "./css/App.css";
 

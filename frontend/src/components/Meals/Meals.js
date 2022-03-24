@@ -4,8 +4,6 @@ import { FaYoutube } from "react-icons/fa";
 import { FaHeartBroken } from "react-icons/fa";
 
 const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
-
-
   /// add to fav
   const addFav = async (id) => {
     console.log(id);
@@ -99,7 +97,7 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
           <img src={meal.strMealThumb} alt={`${meal.strMeal}`} />
           <div className="meals-info">
             <NavLink to={`/${meal.idMeal}`}>
-              <h4>{meal.strMeal.split(" ", 3)}...</h4>
+              <h4>{meal.strMeal.slice(" ", 20)}...</h4>
             </NavLink>
             <>
               {!logedin?.user_favs.includes(meal.idMeal) ? (

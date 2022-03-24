@@ -84,7 +84,7 @@ router.post("/removeFav", (req, res) => {
       for (let i = 0; i < split.length; i++) {
         console.log("split[i]", split[i]);
         console.log("mealId", mealId);
-        if (split[i] === mealId) {
+        if (split[i].includes(mealId)) {
           split.splice(i, 1);
         }
       }

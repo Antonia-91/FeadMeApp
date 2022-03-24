@@ -1,12 +1,7 @@
-.home {
-  z-index: 2;
-  width: 100vw;
-  height: auto;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.home-main {
+  @include main;
 }
+
 .home-top-section {
   z-index: 2;
   display: flex;

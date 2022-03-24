@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PickDate from "../pickDate/PickDate";
+import PickDate from "./pickDate/PickDate";
 import { NavLink, useParams } from "react-router-dom";
 import { FaYoutube, FaCalendar } from "react-icons/fa";
 import Form from "./Form";

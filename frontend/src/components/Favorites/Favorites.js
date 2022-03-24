@@ -4,7 +4,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaHeartBroken } from "react-icons/fa";
 
 const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
-  console.log("favorites", favorites);
+  //console.log("favorites", favorites);
   console.log(logedin);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
       let favString = logedin.user_favs;
       let split = favString.split(",");
       let numbering = split.map((string) => parseInt(string));
-      console.log(numbering);
+      //console.log(numbering);
 
       const request = numbering.map((number) =>
         fetch(
@@ -84,7 +84,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
             <img src={fav.meals[0].strMealThumb} alt="#" />
             <div className="favorite-info">
               <NavLink to={`/${fav.meals[0].idMeal}`}>
-                <h4> {fav.meals[0].strMeal.split(" ", 3)}...</h4>
+                <h4> {fav.meals[0].strMeal.slice(" ", 20)}...</h4>
               </NavLink>
               <div className="icon-holder">
                 <a

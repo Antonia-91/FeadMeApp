@@ -9,17 +9,18 @@ import dinner from "./images/dinner.jpg";
 import listImg from "./images/list.png";
 import bubble from "./images/bubbla.png";
 
-import moment from "moment"; // use tihs?
-
 const Home = ({ todos, logedin, dates, setDates }) => {
-  //console.log(logedin);
-  //console.log(dates);
+  //const [currentDate, setCurrentDate] = useState(new Date());
+  const currentDate = new Date();
+  const mounth = currentDate.getMonth() + 1;
+  let mounthFromServer = [];
+  console.log(dates);
 
   useEffect(() => {
+    console.log(currentDate, mounth);
     const getAllDates = async () => {
       let idToServer = logedin.user_id;
       const datesFromServer = await fechAllDates(idToServer);
-
       setDates(datesFromServer);
     };
     getAllDates();
@@ -33,31 +34,55 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     return data;
   };
 
-  // //// fetchBrekker
-  // const fetchCategory = async (id) => {
-  //   console.log(id);
-  //   const res = await fetch(`http://localhost:5005/${id}`);
-  //   const data = await res.json();
-  //   console.log(data);
-  //   setCategory(data);
-  // };
+  /// destruct dates and save in array "mounthFromServer"
+  if (dates) {
+    for (let i = 0; i < dates.length; i++) {
+      console.log(dates[i].date);
+      let slice = dates[i].date.slice(5, 7);
+      console.log(mounthFromServer);
+      mounthFromServer.push(slice);
+    }
+  }
+  console.log(mounthFromServer);
+
+  mounthFromServer.filter((date) => {
+    if (date.includes(mounth)) {
+      console.log(date);
+    }
+  });
 
   return (
-    <main className="home">
+    <main className="home-main">
       <section className="home-top-section">
         <div className="card">
           <div className="card-content">
             <h2 style={{ textTransform: "capitalize" }}>
-              {logedin.userName}s week:
+              {logedin.userName}s recepies this mounth
             </h2>
             <ul>
-              {dates?.map((date) => (
+              {dates?.map((date) => {
+                if (date.date.slice(5, 7).includes(mounth)) {
+                  return (
+                    <li key={date.meal_id}>
+                      {date.day} / {date.date.slice(5, 10).replace("-", "/")}
+                      <NavLink to={`/${date.meal_id}`}>
+                        {" "}
+                        {date.meal_title.slice(" ", 20)}...
+                      </NavLink>
+                    </li>
+                  );
+                }
+              })}
+
+              {/* {dates?.map((date) => (
                 <li key={date.meal_id}>
+                  {date.day} / {date.date.slice(5, 10).replace("-", "/")}
                   <NavLink to={`/${date.meal_id}`}>
-                    {date.day} : {date.meal_title}
+                    {" "}
+                    {date.meal_title.slice(" ", 20)}...
                   </NavLink>
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
         </div>
@@ -83,11 +108,8 @@ const Home = ({ todos, logedin, dates, setDates }) => {
       </section>
 
       <section className="category-wrapper">
-        <NavLink className="nav-links" to="/breakfast/">
-          <article
-            className="category-article"
-            // onClick={(e) => fetchCategory(e.target.id)}
-          >
+        <NavLink className="nav-links" to="/breakfast">
+          <article className="category-article">
             <img
               id="breakfast"
               src={brunch}
@@ -100,10 +122,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
         </NavLink>
 
         <NavLink className="nav-links" to="/lunch">
-          <article
-            className="category-article"
-            // onClick={(e) => fetchCategory(e.target.id)}
-          >
+          <article className="category-article">
             <img
               id="lunch"
               src={lunch}
@@ -115,10 +134,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
           </article>
         </NavLink>
         <NavLink className="nav-links" to="/dinner">
-          <article
-            className="category-article"
-            //onClick={(e) => fetchCategory(e.target.id)}
-          >
+          <article className="category-article">
             <img
               id="dinner"
               src={dinner}
@@ -130,10 +146,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
           </article>
         </NavLink>
         <NavLink className="nav-links" to="/baking">
-          <article
-            className="category-article"
-            // onClick={(e) => fetchCategory(e.target.id)}
-          >
+          <article className="category-article">
             <img
               id="baking"
               src={baking}
