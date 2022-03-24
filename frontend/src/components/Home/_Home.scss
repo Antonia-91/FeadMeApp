@@ -11,19 +11,51 @@
   align-items: center;
   justify-content: center;
 
+  .card-content-header {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .tab {
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 8px;
+    padding: 8px;
+
+    &:hover {
+      box-shadow: $left-box-shadow;
+    }
+  }
+
   .card {
-    width: 400px;
+    width: 500px;
     height: 200px;
     border-radius: 20px;
     margin: 1rem;
     box-shadow: $left-box-shadow;
     z-index: 2;
     background-color: transparent;
-    display: flex;
 
     &-content {
       padding: 1rem;
     }
+
+    &-date-info {
+      margin-top: 0.2rem;
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      justify-content: space-between;
+      align-items: center;
+      //justify-content: center;
+    }
+  }
+  .hide {
+    display: none;
   }
 
   .nav-links {

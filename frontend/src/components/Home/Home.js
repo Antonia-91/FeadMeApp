@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { FaTimes } from "react-icons/fa";
 /// -- images ---///
 import baking from "./images/baking.jpg";
-import breakfast from "./images/breakFast.jpg";
 import brunch from "./images/brekker.jpg";
 import lunch from "./images/lunch.jpg";
 import dinner from "./images/dinner.jpg";
-import listImg from "./images/list.png";
 import bubble from "./images/bubbla.png";
 
 const Home = ({ todos, logedin, dates, setDates }) => {
-  //const [currentDate, setCurrentDate] = useState(new Date());
+  const [showAll, setShowAll] = useState(true);
+  const [showThisMounth, setShowThisMounth] = useState(false);
   const currentDate = new Date();
   const mounth = currentDate.getMonth() + 1;
   let mounthFromServer = [];
@@ -34,7 +34,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     return data;
   };
 
-  /// destruct dates and save in array "mounthFromServer"
+  /// destruct dates and save in array "mounthFromServer" this to this mounts saved daets
   if (dates) {
     for (let i = 0; i < dates.length; i++) {
       console.log(dates[i].date);
@@ -43,47 +43,78 @@ const Home = ({ todos, logedin, dates, setDates }) => {
       mounthFromServer.push(slice);
     }
   }
-  console.log(mounthFromServer);
 
-  mounthFromServer.filter((date) => {
-    if (date.includes(mounth)) {
-      console.log(date);
-    }
-  });
+  //// onclick
+  const onclick = () => {
+    setShowThisMounth((presState) => !presState);
+    setShowAll((presState) => !presState);
+  };
 
   return (
     <main className="home-main">
       <section className="home-top-section">
-        <div className="card">
+        <div className={showThisMounth ? "card" : "hide"}>
           <div className="card-content">
-            <h2 style={{ textTransform: "capitalize" }}>
-              {logedin.userName}s recepies this mounth
-            </h2>
-            <ul>
-              {dates?.map((date) => {
-                if (date.date.slice(5, 7).includes(mounth)) {
-                  return (
-                    <li key={date.meal_id}>
-                      {date.day} / {date.date.slice(5, 10).replace("-", "/")}
-                      <NavLink to={`/${date.meal_id}`}>
-                        {" "}
-                        {date.meal_title.slice(" ", 20)}...
-                      </NavLink>
-                    </li>
-                  );
-                }
-              })}
+            <header className="card-content-header">
+              <h2 style={{ textTransform: "capitalize" }}>
+                {logedin.userName}s recepies this mounth
+              </h2>
+              <span
+                className="tab"
+                //onClick={() => setShowThisMounth((presState) => !presState)}
+                onClick={onclick}
+              >
+                <p>show all</p>
+              </span>
+            </header>
 
-              {/* {dates?.map((date) => (
-                <li key={date.meal_id}>
+            {dates?.map((date) => {
+              if (date.date.slice(5, 7).includes(mounth)) {
+                return (
+                  <div className="card-date-info" key={date.meal_id}>
+                    <FaTimes style={{ color: "#ff4e50", cursor: "pointer" }} />
+                    <p>
+                      {date.day} / {date.date.slice(5, 10).replace("-", "/")}
+                    </p>
+                    <NavLink to={`/${date.meal_id}`}>
+                      {" "}
+                      {date.meal_title.slice(" ", 20)}...
+                    </NavLink>
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </div>
+
+        {/* hide or show */}
+
+        <div className={showAll ? "card" : "hide"}>
+          <div className="card-content">
+            <header className="card-content-header">
+              <h2 style={{ textTransform: "capitalize" }}>
+                {logedin.userName}s recepies this mounth
+              </h2>
+              <span
+                className="tab"
+                //onClick={() => setShowThisMounth((presState) => !presState)}
+                onClick={onclick}
+              >
+                <p>Mounth</p>
+              </span>
+            </header>
+
+            {dates?.map((date) => (
+              <div className="card-date-info" key={date.meal_id}>
+                <FaTimes style={{ color: "#ff4e50", cursor: "pointer" }} />
+                <p>
                   {date.day} / {date.date.slice(5, 10).replace("-", "/")}
-                  <NavLink to={`/${date.meal_id}`}>
-                    {" "}
-                    {date.meal_title.slice(" ", 20)}...
-                  </NavLink>
-                </li>
-              ))} */}
-            </ul>
+                </p>
+                <NavLink to={`/${date.meal_id}`}>
+                  <p> {date.meal_title.slice(" ", 20)}...</p>
+                </NavLink>
+              </div>
+            ))}
           </div>
         </div>
       </section>
