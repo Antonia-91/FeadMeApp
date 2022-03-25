@@ -66,5 +66,60 @@
     "carbohydrate": "42,9 g",
     "Protein": "11,4 g",
     "The recipe contains": ["Lactose", "Gluten", "Egg", "Fish"]
+  },
+  {
+    "idMeal": "b3",
+    "title": "Sandwiches with roast beef, horseradish and Dijon cream",
+    "ingredients": {
+      "Press cucumber": [
+        "1 cucumber",
+        "  2 tablespoons salt",
+        "1 dl vinegar 12%",
+        "1 dl caster sugar",
+        " ½ dl chopped parsley"
+      ],
+      "Dijon cream": [
+        "2 dl sour cream",
+        "2 tablespoons Dijon mustard",
+        " 1 teaspoon honey",
+        "  salt, black pepper",
+        "   4 slices of rye bread",
+        "200 g sliced roast beef",
+        "  1 piece fresh horseradish"
+      ]
+    },
+    "strInstructions": "Pressed cucumber: (do this the day before for most taste). Slice the cucumber as thinly as you can with a knife, cheese grater or a mandolin. Put in a bowl and salt. Then place another water-filled bowl on top as a weight and let stand at room temperature for 30 minutes. Meanwhile, stir in the vinegar and sugar, stirring until the sugar has dissolved. 2. Take the cucumber out of the bowl and squeeze out. Put it in the vinegar and stir in the chopped parsley. Refrigerate. Dijon cream: Mix the ingredients, season with salt and pepper. 4. Lay out the bread slices. Spread on a little Dijon cream and add the roast beef. Add more Dijon cream and a few slices of cucumber. Peel and grate the horseradish finely. Serve immediately.",
+    "strMealThumb": "https://images.recept.se/images/recipes/smorrebrod-med-rostbiff-pepparrot-och-dijonkram_21651.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.5&fp-y=0.69259621682023&fp-z=1&w=279&h=279&dpr=1&auto=format",
+    "Energi": "2030 kJ (485 kcal)",
+    "Fat": "24 g",
+    "carbohydrate": "51,7 g",
+    "Protein": "17,6 g",
+    "The recipe contains": ["Gluten"]
+  },
+  {
+    "idMeal": "b4",
+    "title": "Ricotta pancakes",
+    "ingredients": {
+      "Press cucumber": [
+        " 3 eggs",
+        "  250 g ricotta cheese",
+        " 2½ dl milk 3%",
+        " 2½ dl wheat flour",
+        "  1 teaspoon baking powder",
+        " butter for frying"
+      ],
+      "Serving": [
+        "maple syrup",
+        "optional berries, such as blueberries and currants",
+        "oconut cream or plain whipped cream"
+      ]
+    },
+    "strInstructions": ". Divide the eggs into yolks and whites. Mix egg yolks, ricotta cheese, milk, flour and baking powder into a batter. Whisk the egg whites to a stiff foam. Turn the whites into the batter. 3. Heat butter in a frying pan and fry small pancakes, about ½ dl batter per pancake, on medium heat. You can fry 4-5 pancakes at a time. 4. Garnish the pancakes with sifted icing sugar and mint and serve with maple syrup, berries and / or a dash of whipped coconut cream or plain cream.",
+    "strMealThumb": "https://images.recept.se/images/recipes/ricottapannkakor_21369.jpg?fit=crop&crop=focalpoint&auto=format&fp-x=0.5&fp-y=0.59225512311069&fp-z=1&w=279&h=279&dpr=1&auto=format",
+    "Energi": "229 kJ (55 kcal)",
+    "Fat": "2,4 g",
+    "carbohydrate": "5,4 g",
+    "Protein": "2,7 g",
+    "The recipe contains": ["Egg", "Lactose", "Gluten"]
   }
 ]

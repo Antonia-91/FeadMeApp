@@ -98,6 +98,7 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
           <div className="meals-info">
             <NavLink to={`/${meal.idMeal}`}>
               <h4>{meal.strMeal.slice(" ", 20)}...</h4>
+              <p>3497 kJ (836 kcal)</p>
             </NavLink>
             <>
               {!logedin?.user_favs.includes(meal.idMeal) ? (

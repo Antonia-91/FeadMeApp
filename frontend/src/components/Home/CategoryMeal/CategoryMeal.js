@@ -7,6 +7,7 @@ const CategoryMeal = () => {
 
   // get id from URL
   let { id } = useParams();
+  console.log(id)
 
   return (
     <div>

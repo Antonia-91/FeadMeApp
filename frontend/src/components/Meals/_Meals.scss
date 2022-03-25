@@ -12,6 +12,10 @@
     width: 200px;
     height: 200px;
   }
+  p {
+    font-style: italic;
+    font-size: .7rem;
+  }
 
   .meals-info {
     @include cardArticle-info;
