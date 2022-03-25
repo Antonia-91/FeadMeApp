@@ -39,6 +39,7 @@ const Tasks = ({ todos, setTodos, reminder }) => {
   //// on delete
   const onDelete = async (id) => {
     console.log(id);
+
     await fetch(`http://localhost:5005/todo/${id}`, {
       method: "DELETE",
     });

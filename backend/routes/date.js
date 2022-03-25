@@ -44,7 +44,7 @@ router.get("/date/:id", (req, res) => {
     if (err) {
       console.log(err);
     }
-     let sql = `SELECT * from dateTable WHERE user_id = ${user_id}`;
+    let sql = `SELECT * from dateTable WHERE user_id = ${user_id}`;
     //let sql2 = `SELECT   (day, meal_id, meal_title) FROM dateTable WHERE user_id = ${user_id}`;
     console.log(sql);
 
@@ -54,6 +54,27 @@ router.get("/date/:id", (req, res) => {
       }
       console.log(result);
       res.json(result);
+    });
+  });
+});
+
+/// delete  date
+router.delete("/date/:id", (req, res) => {
+  console.log(req.params.id);
+
+  req.app.locals.con.connect((err) => {
+    if (err) {
+      console.log(err);
+    }
+    let sql = `DELETE FROM dateTable WHERE date_id = ${req.params.id}`;
+    req.app.locals.con.query(sql, (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(result);
+      res.status(200).json({
+        message: "delete success",
+      });
     });
   });
 });
