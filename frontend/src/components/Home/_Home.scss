@@ -39,6 +39,7 @@
     box-shadow: $left-box-shadow;
     z-index: 2;
     background-color: transparent;
+    overflow: scroll;
 
     &-content {
       padding: 1rem;

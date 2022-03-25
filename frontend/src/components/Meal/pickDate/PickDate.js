@@ -75,6 +75,7 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
     });
     const data = await res.json();
     console.log(data);
+    alert(value);
   };
 
   return (

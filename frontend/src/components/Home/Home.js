@@ -14,7 +14,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
   const currentDate = new Date();
   const mounth = currentDate.getMonth() + 1;
   let mounthFromServer = [];
-  console.log(dates);
+  console.log(todos.length);
 
   useEffect(() => {
     console.log(currentDate, mounth);
@@ -52,6 +52,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
 
   return (
     <main className="home-main">
+      <h4></h4>
       <section className="home-top-section">
         <div className={showThisMounth ? "card" : "hide"}>
           <div className="card-content">
@@ -71,7 +72,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
             {dates?.map((date) => {
               if (date.date.slice(5, 7).includes(mounth)) {
                 return (
-                  <div className="card-date-info" key={date.meal_id}>
+                  <div className="card-date-info" key={date.date_id}>
                     <FaTimes style={{ color: "#ff4e50", cursor: "pointer" }} />
                     <p>
                       {date.day} / {date.date.slice(5, 10).replace("-", "/")}
@@ -93,7 +94,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
           <div className="card-content">
             <header className="card-content-header">
               <h2 style={{ textTransform: "capitalize" }}>
-                {logedin.userName}s recepies this mounth
+                {logedin.userName}s All saved recepies
               </h2>
               <span
                 className="tab"
@@ -110,8 +111,9 @@ const Home = ({ todos, logedin, dates, setDates }) => {
                 <p>
                   {date.day} / {date.date.slice(5, 10).replace("-", "/")}
                 </p>
+
                 <NavLink to={`/${date.meal_id}`}>
-                  <p> {date.meal_title.slice(" ", 20)}...</p>
+                  <p> {date.meal_title.slice(" ", 15)}...</p>
                 </NavLink>
               </div>
             ))}
