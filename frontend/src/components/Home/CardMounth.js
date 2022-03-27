@@ -3,18 +3,20 @@ import { FaTimes } from "react-icons/fa";
 
 const CardMounth = ({
   showThisMounth,
-  logedin,
   dates,
   mounth,
   onclick,
   onDelete,
 }) => {
+
+
+
   return (
     <div className={showThisMounth ? "card" : "hide"}>
       <div className="card-content">
         <header className="card-content-header">
           <h2 style={{ textTransform: "capitalize" }}>
-            {logedin.userName}s recepies this mounth
+            recepies this mounth
           </h2>
           <span
             className="tab"

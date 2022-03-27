@@ -1,12 +1,9 @@
-
 import { NavLink } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 
 const CardYear = ({
   showAll,
-  logedin,
   dates,
-
   onclick,
   onDelete,
 }) => {
@@ -14,9 +11,7 @@ const CardYear = ({
     <div className={showAll ? "card" : "hide"}>
       <div className="card-content">
         <header className="card-content-header">
-          <h2 style={{ textTransform: "capitalize" }}>
-            {logedin.userName}s All saved recepies
-          </h2>
+          <h2 style={{ textTransform: "capitalize" }}>All saved recepies</h2>
           <span className="tab" onClick={onclick}>
             <p>Mounth</p>
           </span>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import CardPersona from "./CardPersona";
 import CardMounth from "./CardMounth";
 import CardYear from "./CardYear";
 import CategoryWrapper from "./CategoryWrapper";
@@ -68,9 +69,10 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     <main className="home-main">
       <h2>Home</h2>
       <section className="home-top-section">
+        <CardPersona logedin={logedin} />
+
         <CardMounth
           showThisMounth={showThisMounth}
-          logedin={logedin}
           dates={dates}
           mounth={mounth}
           onclick={onclick}
@@ -80,7 +82,6 @@ const Home = ({ todos, logedin, dates, setDates }) => {
         {/* hide or show */}
         <CardYear
           showAll={showAll}
-          logedin={logedin}
           dates={dates}
           onclick={onclick}
           onDelete={onDelete}

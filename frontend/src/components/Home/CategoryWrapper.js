@@ -9,8 +9,9 @@ import dinner from "./images/dinner.jpg";
 const CategoryWrapper = () => {
   return (
     <>
-      {" "}
+       
       <NavLink className="nav-links" to="/breakfast">
+        
         <article className="category-article">
           <img
             id="breakfast"
