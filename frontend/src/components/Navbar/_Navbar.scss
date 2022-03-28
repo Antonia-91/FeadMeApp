@@ -15,18 +15,30 @@
 }
 
 .nav-logo {
-  text-shadow: -2px 2px -4px #0000004b;
+  text-shadow: -1px 2px -4px #0000004b;
   font-size: 40px;
+
   background: -webkit-gradient(
     linear,
     left top,
     right top,
     from(#ff4e50),
-    color-stop(20%, #f39c12),
-    to(#f9d423)
+    color-stop(20%, #ee9300),
+    to(#ffd500)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  // background: -webkit-gradient(
+  //   linear,
+  //   left top,
+  //   right top,
+  //   from(#ff4e50),
+  //   color-stop(20%, #f39c12),
+  //   to(#f9d423)
+  // );
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
 }
 
 .nav-link-holder {
@@ -68,8 +80,12 @@
     bottom: 0;
     z-index: 3;
     //background-color: $card-background;
-    background-color: rgba(255, 166, 0, 0.479);
+    background-color: $opasityOrnge;
     padding: 1rem;
+
+    &:hover {
+      background-color: $lightOrange;
+    }
   }
 }
 @media screen and (max-width: 500px) {
@@ -85,7 +101,7 @@
     justify-content: space-around;
 
     li {
-      margin-bottom: .3rem;
+      margin-bottom: 0.3rem;
       font-size: 14px;
     }
 

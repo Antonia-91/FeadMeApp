@@ -31,6 +31,8 @@ body {
 
 .App {
   width: 100vw;
+  min-width: 400px;
+  overflow: scroll;
   height: 100vh;
   background-image: url("../backgroundImg/web3.png");
   background-repeat: no-repeat;

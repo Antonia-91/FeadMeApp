@@ -1,4 +1,4 @@
-footer {
+aside {
   height: 100%;
   width: 40px;
   display: flex;
@@ -8,6 +8,9 @@ footer {
   background-color: $lightOrange;
   justify-content: center;
   align-items: center;
+  &:hover {
+    z-index: 4;
+  }
 }
 
 .footer-div {
@@ -43,8 +46,8 @@ footer {
   }
 
   ul li {
-      color: $hover;
-      cursor: pointer;
-      margin: .5rem;
+    color: $hover;
+    cursor: pointer;
+    margin: 0.5rem;
   }
 }

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer>
+    <aside>
       <div className="footer-div">
         <NavLink to="/about">
           <p
@@ -55,7 +55,7 @@ const Footer = () => {
           </p>
         </NavLink>
       </div>
-    </footer>
+    </aside>
   );
 };
 
