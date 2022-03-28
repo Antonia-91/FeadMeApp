@@ -1,0 +1,50 @@
+footer {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $lightOrange;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-div {
+  height: 80%;
+  writing-mode: sideways-lr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  p {
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  p:hover {
+    color: $hover;
+  }
+}
+
+//// contact, API, about, cookies, antonia
+.main {
+  @include main;
+
+  overflow: scroll;
+
+  .section {
+    margin-bottom: 1rem;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  ul li {
+      color: $hover;
+      cursor: pointer;
+      margin: .5rem;
+  }
+}

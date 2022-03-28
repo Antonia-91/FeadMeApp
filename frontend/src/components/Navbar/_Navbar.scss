@@ -72,7 +72,7 @@
     padding: 1rem;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .navbar-container {
     // display: flex;
     flex-direction: column;
@@ -85,7 +85,8 @@
     justify-content: space-around;
 
     li {
-      margin-bottom: .5rem;
+      margin-bottom: .3rem;
+      font-size: 14px;
     }
 
     .nav-links {

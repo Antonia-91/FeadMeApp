@@ -13,7 +13,9 @@ import Lunch from "./components/Home/CategoryMeal/Lunch/Lunch";
 import Dinner from "./components/Home/CategoryMeal/Dinner/Dinner";
 import Baking from "./components/Home/CategoryMeal/Baking/Baking";
 import CategoryMeal from "./components/Home/CategoryMeal/CategoryMeal";
+import Footer from "./components/Footer/Footer";
 import "./css/App.css";
+import About from "./components/Footer/About";
 
 //import webImg from "./src/backgroundImg/Web 1920 – 2";
 //import webImg from "../src/backgroundImg/web.jpg";
@@ -39,6 +41,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar logedin={logedin} setLogedin={setLogedin} />
+
         <Routes>
           <>
             {logedin && (
@@ -121,8 +124,10 @@ function App() {
               path="/login"
               element={<Login setUser={setUser} user={user} />}
             />
+            <Route path="/about" element={<About />} />
           </>
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

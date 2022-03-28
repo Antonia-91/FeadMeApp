@@ -14,7 +14,7 @@ const CardPersona = ({ logedin }) => {
           <h2
             style={{
               textTransform: "capitalize",
-              fontSize: "50px",
+              fontSize: "40px",
               color: "#ff4e50",
               writingMode: "vertical-rl",
             }}
@@ -24,19 +24,19 @@ const CardPersona = ({ logedin }) => {
         </div>
         <div className="content-right">
           <span>
-            <FaShoePrints style={{ color: "#ff4e50;", fontSize: "30px" }} />
+            <FaShoePrints style={{ color: "#ff4e50;", fontSize: "25px" }} />
            <p>1300/8000 steps</p> 
           </span>
           <span>
-            <FaHeartbeat style={{ color: "orange", fontSize: "30px" }} />
+            <FaHeartbeat style={{ color: "orange", fontSize: "25px" }} />
            <p> 71 beats/min</p>
           </span>
           <span>
-            <FaHamburger style={{ color: "#ff4e50;", fontSize: "30px" }} />
+            <FaHamburger style={{ color: "#ff4e50;", fontSize: "25px" }} />
         <p> 1200 kcal / 2800 </p>
           </span>
           <span>
-            <FaGlassWhiskey style={{ color: "orange", fontSize: "30px" }} />
+            <FaGlassWhiskey style={{ color: "orange", fontSize: "25px" }} />
         <p> 1 L / 3 L</p>
           </span>
         </div>
