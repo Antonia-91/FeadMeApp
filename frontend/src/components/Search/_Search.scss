@@ -2,13 +2,15 @@
   @include main;
 
   .seach-section {
+    z-index: 2;
     //position: relative;
     height: fit-content;
     padding: 1rem;
     width: 100%;
 
     h2 {
-      color: white;
+      //color: white;
+      margin-left: 2rem;
     }
     // OBS Background Img settings in app.scss
   }

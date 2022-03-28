@@ -15,7 +15,7 @@ aside {
 
 .footer-div {
   height: 80%;
-  writing-mode: sideways-lr;
+  //writing-mode: sideways-lr;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -25,6 +25,8 @@ aside {
     font-size: 12px;
     cursor: pointer;
     padding: 0.5rem;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
   }
   p:hover {
     color: $hover;

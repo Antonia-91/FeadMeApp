@@ -7,18 +7,18 @@ const Footer = () => {
       <div className="footer-div">
         <NavLink to="/about">
           <p
-            style={{
-              writingMode: "vertical-rl",
-            }}
+          // style={{
+          //   writingMode: "vertical-rl",
+          // }}
           >
             Contact
           </p>
         </NavLink>
         <NavLink to="/about">
           <p
-            style={{
-              writingMode: "vertical-rl",
-            }}
+          // style={{
+          //   writingMode: "vertical-rl",
+          // }}
           >
             API
           </p>
@@ -27,9 +27,9 @@ const Footer = () => {
         <NavLink to="/about">
           {" "}
           <p
-            style={{
-              writingMode: "vertical-rl",
-            }}
+          // style={{
+          //   writingMode: "vertical-rl",
+          // }}
           >
             About
           </p>
@@ -38,18 +38,18 @@ const Footer = () => {
         <NavLink to="/about">
           {" "}
           <p
-            style={{
-              writingMode: "vertical-rl",
-            }}
+          // style={{
+          //   writingMode: "vertical-rl",
+          // }}
           >
             Cookies
           </p>
         </NavLink>
         <NavLink to="/about">
           <p
-            style={{
-              writingMode: "vertical-rl",
-            }}
+          // style={{
+          //   writingMode: "vertical-rl",
+          // }}
           >
             &copy; 2022 Antonia Pettersson
           </p>
