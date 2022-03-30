@@ -48,6 +48,11 @@ app.locals.con = mysql.createConnection({
   database: "MealsApp",
 });
 
+// // 
+// if(process.env.NODE_ENV === "production"){
+//   app.use(express.static("frontend/build"))
+// }
+
 app.listen(process.env.PORT || 5005, () => {
   console.log(
     `Server is ready at http://localhost:${process.env.PORT || 5005}`

@@ -33,7 +33,7 @@ const CardPersona = ({ logedin }) => {
           </span>
           <span>
             <FaHamburger style={{ color: "#ff4e50;", fontSize: "25px" }} />
-        <p> 1200 kcal / 2800 </p>
+        <p> 1200 / 2800 kcal </p>
           </span>
           <span>
             <FaGlassWhiskey style={{ color: "orange", fontSize: "25px" }} />

@@ -1,0 +1,15 @@
+# "scripts": {
+#     "start": "react-scripts start", 
+   
+#     "build": "cd frontend && npm run build",
+#     "install-frontend": "cd frontend && npm install",
+#     "heroku-postbuild": "npm run install-frontend && npm run build ",
+
+#     "test": "react-scripts test",
+#     "eject": "react-scripts eject",
+#     "sass": "sass --watch scss -o css"
+#   },
+
+
+# deploy on Heroku and netlify 
+# https://www.youtube.com/watch?v=lwOsI8LtVEQ&ab_channel=PedroTech
