@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 
 const Tasks = ({ todos, setTodos, reminder }) => {
-  //// Fetch one todo
+  //// Fetch one todo   https://feadmeapp-examen-project.herokuapp.com/todo/${id}
+  // http://localhost:5005/todo/${id}
   const fetchTodo = async (id) => {
-    const res = await fetch(`http://localhost:5005/todo/${id}`);
+    const res = await fetch(` https://feadmeapp-examen-project.herokuapp.com/todo/${id}`);
     const data = await res.json();
     //console.log(data);
     return data;
@@ -19,7 +20,7 @@ const Tasks = ({ todos, setTodos, reminder }) => {
     };
     console.log(updateTask);
 
-    const res = await fetch(`http://localhost:5005/todo/${id}`, {
+    const res = await fetch(` https://feadmeapp-examen-project.herokuapp.com/todo/${id}`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -40,7 +41,7 @@ const Tasks = ({ todos, setTodos, reminder }) => {
   const onDelete = async (id) => {
     console.log(id);
 
-    await fetch(`http://localhost:5005/todo/${id}`, {
+    await fetch(`https://feadmeapp-examen-project.herokuapp.com/todo/${id}`, {
       method: "DELETE",
     });
     setTodos(todos.filter((todo) => todo.todoList_id !== id));

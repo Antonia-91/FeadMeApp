@@ -24,9 +24,10 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     getAllDates();
   }, [logedin]);
 
-  /// fetch all Dates
+  /// fetch all Dates    https://feadmeapp-examen-project.herokuapp.com/date/${id}
+  //`http://localhost:5005/date/${id}`
   const fechAllDates = async (id) => {
-    const res = await fetch(`http://localhost:5005/date/${id}`);
+    const res = await fetch(`https://feadmeapp-examen-project.herokuapp.com/date/${id}`);
     const data = await res.json();
 
     return data;
@@ -48,12 +49,12 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     setShowAll((presState) => !presState);
   };
 
-  //// on delete
+  //// on delete    https://feadmeapp-examen-project.herokuapp.com/date/${id}
   const onDelete = async (id) => {
     console.log(id);
 
     if (window.confirm("delete this date?")) {
-      await fetch(`http://localhost:5005/date/${id} `, {
+      await fetch(`https://feadmeapp-examen-project.herokuapp.com/date/${id} `, {
         method: "DELETE",
       })
         .then((res) => res.json())

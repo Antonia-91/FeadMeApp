@@ -6,7 +6,7 @@ router.use(cors());
 const fs = require("fs");
 //Download from database
 const data = fs.readFileSync("./database/breakfast.json", "utf8");
-console.log("data", data);
+//console.log("data", data);
 
 /// get all meals data 
 router.get("/breakfast", (req, res) => {

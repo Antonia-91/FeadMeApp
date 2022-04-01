@@ -39,22 +39,35 @@ app.use(lunchRouter);
 app.use(dinnerRouter);
 app.use(bakingRouter);
 
-/// connect to database
-app.locals.con = mysql.createConnection({
-  host: "localhost",
-  port: "8889",
-  user: "MealsApp",
-  password: "MealsApp",
-  database: "MealsApp",
-});
+/// connect to database  LOCAL
+// app.locals.con = mysql.createConnection({
+//   host: "localhost",
+//   port: "8889",
+//   user: "MealsApp",
+//   password: "MealsApp",
+//   database: "MealsApp",
+// });
 
-// // 
-// if(process.env.NODE_ENV === "production"){
-//   app.use(express.static("frontend/build"))
-// }
+/// connect to database HEROKU
+app.locals.con = mysql.createConnection({
+  host: "eu-cdbr-west-02.cleardb.net",
+  // port: "8889",
+  user: "bd625d758bc100",
+  password: "b944cdea",
+  database: "heroku_f18251a49332320",
+  dialect: "mysql",
+});
 
 app.listen(process.env.PORT || 5005, () => {
   console.log(
     `Server is ready at http://localhost:${process.env.PORT || 5005}`
   );
 });
+
+/// obs 
+// git add . 
+// git commit -am"xxx"
+// git push heroku master 
+
+// mysql://bd625d758bc100:b944cdea@eu-cdbr-west-02.cleardb.net/heroku_f18251a49332320?reconnect=true
+//mysql://bd625d758bc100:b944cdea@eu-cdbr-west-02.cleardb.net/heroku_f18251a49332320?reconnect=true

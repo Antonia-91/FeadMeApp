@@ -9,7 +9,7 @@ const Dinner = () => {
     fetchCategory();
   }, []);
 
-  //// fetchBrekker
+  //// fetchBrekker   https://feadmeapp-examen-project.herokuapp.com/dinner
   const fetchCategory = async () => {
     const res = await fetch(`http://localhost:5005/dinner`);
     const data = await res.json();

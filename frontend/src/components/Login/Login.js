@@ -24,8 +24,11 @@ const Login = ({setUser, user}) => {
     await onLogin(userToLogin);
   };
 
+
+   /// on login   https://feadmeapp-examen-project.herokuapp.com/login
+   // http://localhost:5005/login
   const onLogin = async (userToLogin) => {
-    const res = await fetch("http://localhost:5005/login", {
+    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

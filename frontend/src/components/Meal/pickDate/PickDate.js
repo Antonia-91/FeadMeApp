@@ -64,9 +64,10 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
     await savDate(obj);
   };
 
-  ///  Post date
+  ///  Post date   https://feadmeapp-examen-project.herokuapp.com/saveDate
+  // http://localhost:5005/savaDate
   const savDate = async (obj) => {
-    const res = await fetch("http://localhost:5005/savaDate", {
+    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/saveDate", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

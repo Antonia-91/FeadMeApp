@@ -17,9 +17,10 @@ const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
     getAllTodos();
   }, [logedin]);
 
-  /// fetch all todos
+  /// fetch all todos   https://feadmeapp-examen-project.herokuapp.com/todos/${id}
+  // `http://localhost:5005/todos/${id}`
   const fetchAllTodos = async (id) => {
-    const res = await fetch(`http://localhost:5005/todos/${id}`);
+    const res = await fetch(`https://feadmeapp-examen-project.herokuapp.com/todos/${id}`);
     const data = await res.json();
     return data;
   };
@@ -40,9 +41,10 @@ const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
     setReminder(false);
   };
 
-  //// post new todo
+  //// post new todo   https://feadmeapp-examen-project.herokuapp.com/addTodo
+  // http://localhost:5005/addTodo
   const onAdd = async (obj) => {
-    const res = await fetch("http://localhost:5005/addTodo", {
+    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/addTodo", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

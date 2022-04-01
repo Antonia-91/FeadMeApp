@@ -9,7 +9,7 @@ const Baking = () => {
     fetchCategory();
   }, []);
 
-  //// fetchBrekker
+  //// fetchBrekker https://feadmeapp-examen-project.herokuapp.com/baking
   const fetchCategory = async () => {
     const res = await fetch(`http://localhost:5005/baking`);
     const data = await res.json();

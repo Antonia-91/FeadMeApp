@@ -16,9 +16,10 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
     await fecthFav(obj);
   };
 
-  /// post fav to Db
+  /// post fav to Db  https://feadmeapp-examen-project.herokuapp.com/addFav
+  // `http://localhost:5005/addFav`
   const fecthFav = async (obj) => {
-    const res = await fetch(`http://localhost:5005/addFav`, {
+    const res = await fetch(`https://feadmeapp-examen-project.herokuapp.com/addFav`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -54,9 +55,10 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
     await removeFavorite(obj);
   };
 
-  //// post remove to Db
+  //// post remove to Db   https://feadmeapp-examen-project.herokuapp.com/removeFav
+  // http://localhost:5005/removeFav
   const removeFavorite = async (obj) => {
-    const res = await fetch("http://localhost:5005/removeFav", {
+    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/removeFav", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

@@ -9,7 +9,7 @@ const Brekker = () => {
     fetchCategory();
   }, []);
 
-  //// fetchBrekker
+  //// fetchBrekker    https://feadmeapp-examen-project.herokuapp.com/breakfast
   const fetchCategory = async () => {
     const res = await fetch(`http://localhost:5005/breakfast`);
     const data = await res.json();

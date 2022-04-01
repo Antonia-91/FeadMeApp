@@ -24,9 +24,10 @@ const Form = ({ logedin, todos, setTodos }) => {
     setString("");
   };
 
-  /// post shoppinglist   addToShopingList
+  /// post shoppinglist   addToShopingList    https://feadmeapp-examen-project.herokuapp.com/addMultiTodos
+  // http://localhost:5005/addMultiTodos
   const fetchShoppinglist = async (arrayToServer) => {
-    const res = await fetch("http://localhost:5005/addMultiTodos", {
+    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/addMultiTodos", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
