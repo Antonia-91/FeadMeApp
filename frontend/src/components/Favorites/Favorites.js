@@ -38,16 +38,21 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
     await removeFavorite(obj);
   };
 
-  //// post remove to Db  /// https://feadmeapp-examen-project.herokuapp.com/removeFav
-  // http://localhost:5005/removeFav 
+  //// post remove to Db
+  //  https://corsanywhere.herokuapp.com/ ?
+  /// https://feadmeapp-examen-project.herokuapp.com/removeFav
+  // http://localhost:5005/removeFav
   const removeFavorite = async (obj) => {
-    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/removeFav", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    const res = await fetch(
+      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/removeFav",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     const data = await res.json();
     console.log(data);
     /// filtrera array favoriter. sortera ut den somhar samma id som vi precis raderat

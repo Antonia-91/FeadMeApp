@@ -107,7 +107,6 @@ router.delete("/todo/:id", (req, res) => {
   });
 });
 
-
 /// adding multiply todos
 
 router.post("/addMultiTodos", (req, res) => {
@@ -126,10 +125,9 @@ router.post("/addMultiTodos", (req, res) => {
       console.log(result);
 
       res.json({ message: "ok", result: result });
+      //res.status(200).json(result);
     });
   });
 });
-
-
 
 module.exports = router;

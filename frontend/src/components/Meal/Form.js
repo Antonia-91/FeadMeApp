@@ -27,17 +27,22 @@ const Form = ({ logedin, todos, setTodos }) => {
   /// post shoppinglist   addToShopingList    https://feadmeapp-examen-project.herokuapp.com/addMultiTodos
   // http://localhost:5005/addMultiTodos
   const fetchShoppinglist = async (arrayToServer) => {
-    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/addMultiTodos", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(arrayToServer),
-    });
+    const res = await fetch(
+      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addMultiTodos",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(arrayToServer),
+      }
+    );
     const data = await res.json();
+
     console.log(data);
+    console.log(arrayToServer.length);
     if (data.message === "ok") {
-      for (let i = 0; i < data.result.affectedRows; i++) {
+      for (let i = 0; i < arrayToServer.length; i++) {
         let updateTodo = {
           todoList_id: data.result.insertId + i,
           todoList_reminder: 0,
@@ -48,6 +53,8 @@ const Form = ({ logedin, todos, setTodos }) => {
       }
     }
   };
+
+  console.log(todos);
 
   return (
     <div className="form">

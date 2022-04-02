@@ -24,20 +24,20 @@ const CardPersona = ({ logedin }) => {
         </div>
         <div className="content-right">
           <span>
-            <FaShoePrints style={{ color: "#ff4e50;", fontSize: "25px" }} />
-           <p>1300/8000 steps</p> 
+            <FaShoePrints style={{ color: "#ff4e50", fontSize: "25px" }} />
+            <p>1300/8000 steps</p>
           </span>
           <span>
             <FaHeartbeat style={{ color: "orange", fontSize: "25px" }} />
-           <p> 71 beats/min</p>
+            <p> 71 beats/min</p>
           </span>
           <span>
             <FaHamburger style={{ color: "#ff4e50;", fontSize: "25px" }} />
-        <p> 1200 / 2800 kcal </p>
+            <p> 1200 / 2800 kcal </p>
           </span>
           <span>
             <FaGlassWhiskey style={{ color: "orange", fontSize: "25px" }} />
-        <p> 1 L / 3 L</p>
+            <p> 1 L / 3 L</p>
           </span>
         </div>
       </div>

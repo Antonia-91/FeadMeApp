@@ -5,6 +5,7 @@ const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
   //const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
   const [reminder, setReminder] = useState(false);
+
   console.log(todos);
 
   useEffect(() => {
@@ -17,10 +18,13 @@ const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
     getAllTodos();
   }, [logedin]);
 
-  /// fetch all todos   https://feadmeapp-examen-project.herokuapp.com/todos/${id}
+  /// fetch all todos
+  //https://feadmeapp-examen-project.herokuapp.com/todos/${id}
   // `http://localhost:5005/todos/${id}`
   const fetchAllTodos = async (id) => {
-    const res = await fetch(`https://feadmeapp-examen-project.herokuapp.com/todos/${id}`);
+    const res = await fetch(
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/todos/${id}`
+    );
     const data = await res.json();
     return data;
   };
@@ -41,18 +45,22 @@ const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
     setReminder(false);
   };
 
-  //// post new todo   https://feadmeapp-examen-project.herokuapp.com/addTodo
+  //// post new todo
+  //https://feadmeapp-examen-project.herokuapp.com/addTodo
   // http://localhost:5005/addTodo
   const onAdd = async (obj) => {
-    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/addTodo", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    const res = await fetch(
+      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addTodo",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     const data = await res.json();
-    //console.log(data);
+    console.log(data);
     if (data.message === "success") {
       let newTodo = {
         todoList_id: data.insertId,

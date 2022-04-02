@@ -11,7 +11,9 @@ const Brekker = () => {
 
   //// fetchBrekker    https://feadmeapp-examen-project.herokuapp.com/breakfast
   const fetchCategory = async () => {
-    const res = await fetch(`http://localhost:5005/breakfast`);
+    const res = await fetch(
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/breakfast`
+    );
     const data = await res.json();
     console.log(data.breakfast);
     setCategory(data.breakfast);

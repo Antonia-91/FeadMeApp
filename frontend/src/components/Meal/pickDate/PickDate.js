@@ -64,16 +64,20 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
     await savDate(obj);
   };
 
-  ///  Post date   https://feadmeapp-examen-project.herokuapp.com/saveDate
-  // http://localhost:5005/savaDate
+  ///  Post date
+  // https://feadmeapp-examen-project.herokuapp.com/saveDate
+  // http://localhost:5005/saveDate
   const savDate = async (obj) => {
-    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/saveDate", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    const res = await fetch(
+      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/saveDate",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     const data = await res.json();
     console.log(data);
     alert(value);

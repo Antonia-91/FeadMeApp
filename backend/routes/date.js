@@ -4,7 +4,7 @@ const cors = require("cors");
 router.use(cors());
 
 /// post new date
-router.post("/savaDate", (req, res) => {
+router.post("/saveDate", (req, res) => {
   console.log(req.body);
 
   const date = req.body.date;

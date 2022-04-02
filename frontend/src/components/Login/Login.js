@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //import { MyContext } from "../condex";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({setUser, user}) => {
+const Login = ({ setUser, user }) => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   // const { user, setUser } = useContext(MyContext);
@@ -24,17 +24,20 @@ const Login = ({setUser, user}) => {
     await onLogin(userToLogin);
   };
 
-
-   /// on login   https://feadmeapp-examen-project.herokuapp.com/login
-   // http://localhost:5005/login
+  /// on login   
+  // https://feadmeapp-examen-project.herokuapp.com/login
+  // http://localhost:5005/login
   const onLogin = async (userToLogin) => {
-    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/login", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(userToLogin),
-    });
+    const res = await fetch(
+      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(userToLogin),
+      }
+    );
     const data = await res.json();
     console.log(data);
 

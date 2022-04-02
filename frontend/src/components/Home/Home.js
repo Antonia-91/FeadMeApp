@@ -24,10 +24,13 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     getAllDates();
   }, [logedin]);
 
-  /// fetch all Dates    https://feadmeapp-examen-project.herokuapp.com/date/${id}
+  /// fetch all Dates
+  //https://feadmeapp-examen-project.herokuapp.com/date/${id}
   //`http://localhost:5005/date/${id}`
   const fechAllDates = async (id) => {
-    const res = await fetch(`https://feadmeapp-examen-project.herokuapp.com/date/${id}`);
+    const res = await fetch(
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/date/${id}`
+    );
     const data = await res.json();
 
     return data;
@@ -54,9 +57,12 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     console.log(id);
 
     if (window.confirm("delete this date?")) {
-      await fetch(`https://feadmeapp-examen-project.herokuapp.com/date/${id} `, {
-        method: "DELETE",
-      })
+      await fetch(
+        `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/date/${id} `,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.message === "delete success") {

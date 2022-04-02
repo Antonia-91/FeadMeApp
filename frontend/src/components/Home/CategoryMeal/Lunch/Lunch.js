@@ -4,7 +4,6 @@ import Meals from "../Meals.js";
 
 const Lunch = () => {
   const [category, setCategory] = useState();
- 
 
   useEffect(() => {
     fetchCategory();
@@ -12,7 +11,9 @@ const Lunch = () => {
 
   //// fetchBrekker    https://feadmeapp-examen-project.herokuapp.com/lunch
   const fetchCategory = async () => {
-    const res = await fetch(`http://localhost:5005/lunch`);
+    const res = await fetch(
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/lunch`
+    );
     const data = await res.json();
     console.log(data.lunch);
     setCategory(data.lunch);

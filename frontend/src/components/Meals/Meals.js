@@ -16,16 +16,21 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
     await fecthFav(obj);
   };
 
-  /// post fav to Db  https://feadmeapp-examen-project.herokuapp.com/addFav
+  /// post fav to Db
+  // https://corsanywhere.herokuapp.com/ ?
+  // https://feadmeapp-examen-project.herokuapp.com/addFav
   // `http://localhost:5005/addFav`
   const fecthFav = async (obj) => {
-    const res = await fetch(`https://feadmeapp-examen-project.herokuapp.com/addFav`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    const res = await fetch(
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addFav`,
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     const data = await res.json();
     console.log(data);
     let result = data.data;
@@ -58,13 +63,16 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
   //// post remove to Db   https://feadmeapp-examen-project.herokuapp.com/removeFav
   // http://localhost:5005/removeFav
   const removeFavorite = async (obj) => {
-    const res = await fetch("https://feadmeapp-examen-project.herokuapp.com/removeFav", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    const res = await fetch(
+      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/removeFav",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     const data = await res.json();
     console.log(data);
     if ((data.message = "success")) {

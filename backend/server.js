@@ -29,6 +29,11 @@ app.use(
   })
 );
 
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   next();
+// });
+
 /// use routes
 app.use(userRouter);
 app.use(favoritesRouter);
@@ -64,10 +69,10 @@ app.listen(process.env.PORT || 5005, () => {
   );
 });
 
-/// obs 
-// git add . 
+/// obs
+// git add .
 // git commit -am"xxx"
-// git push heroku master 
+// git push heroku master
 
 // mysql://bd625d758bc100:b944cdea@eu-cdbr-west-02.cleardb.net/heroku_f18251a49332320?reconnect=true
 //mysql://bd625d758bc100:b944cdea@eu-cdbr-west-02.cleardb.net/heroku_f18251a49332320?reconnect=true
