@@ -9,7 +9,7 @@
 @import "../components/Meal/Meal.scss";
 @import "../components/Favorites/Favorites.scss";
 @import "../components/Shoppinglist/Shoppinglist.scss";
-@import "../components/DatePick/DatePick";
+// @import "../components/DatePick/DatePick";
 @import "../components/Footer/footer";
 //@import "../components/Home/Baking/Baking";
 //@import "../src/backgroundImg/web.jpg";
@@ -92,4 +92,22 @@ ul {
 
 input {
   @include input;
+}
+
+////
+.date-holder {
+  background-color: orange;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+
+  input {
+    width: 200px;
+  }
 }
