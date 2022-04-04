@@ -72,6 +72,7 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
       "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/saveDate",
       {
         method: "POST",
+        
         headers: {
           "Content-type": "application/json",
         },
