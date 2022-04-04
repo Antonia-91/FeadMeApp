@@ -37,6 +37,9 @@ function App() {
     setLogedin(getUser);
   }, [user]);
 
+  // when Deploying on gh-pages 
+  /// <Route exact path="/your-project-repo's-name" component={HomeContainer} />
+
   return (
     <div className="App">
       <Router>

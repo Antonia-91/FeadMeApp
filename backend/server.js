@@ -29,6 +29,14 @@ app.use(
   })
 );
 
+
+/// use this?
+app.use(express.static(path.join(__dirname, "build")));
+
+// app.get("/*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
+
 // app.use((req, res, next) => {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   next();

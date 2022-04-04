@@ -77,7 +77,7 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
     console.log(data);
     if ((data.message = "success")) {
       let filtered = favorites.filter(
-        (fav) => fav.meals[0].idMeal != obj.mealId
+        (fav) => fav.meals[0].idMeal !== obj.mealId
       );
       console.log("filtered", filtered);
       setFavorites(filtered);
