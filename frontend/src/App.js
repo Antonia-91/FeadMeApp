@@ -50,7 +50,7 @@ function App() {
             {logedin && (
               <Route
                 exact
-                path="/"
+                path="/home"
                 element={
                   <Home
                     logedin={logedin}

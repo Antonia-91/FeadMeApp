@@ -24,7 +24,7 @@ const Login = ({ setUser, user }) => {
     await onLogin(userToLogin);
   };
 
-  /// on login   
+  /// on login
   // https://feadmeapp-examen-project.herokuapp.com/login
   // http://localhost:5005/login
   const onLogin = async (userToLogin) => {
@@ -47,7 +47,7 @@ const Login = ({ setUser, user }) => {
       setUser(data[0]);
 
       localStorage.setItem("user", JSON.stringify(data[0]));
-      navigate("/");
+      navigate("/home");
     }
   };
 
