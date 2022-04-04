@@ -8,7 +8,7 @@ const Navbar = ({ logedin, setLogedin }) => {
   };
   return (
     <nav className="navbar-container">
-      <NavLink className="nav-links" to="/">
+      <NavLink className="nav-links" to="/home">
         <h1 className="nav-logo">FeadMeApp</h1>
       </NavLink>
 
@@ -16,12 +16,11 @@ const Navbar = ({ logedin, setLogedin }) => {
         {logedin && (
           <li>
             <NavLink className="nav-links" to="/seach">
-            
               Recepies
             </NavLink>
           </li>
         )}
-    
+
         {logedin && (
           <li>
             <NavLink className="nav-links" to="/favorites">
