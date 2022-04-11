@@ -17,7 +17,8 @@
     height: 150px;
     border-radius: 20px;
     margin: 1rem;
-    box-shadow: $left-box-shadow;
+    //box-shadow: $left-box-shadow;
+    box-shadow: $box-shadow;
     z-index: 2;
     background-color: $opasityOrnge;
     //background-color:$card-background;
@@ -68,7 +69,8 @@
     height: 150px;
     border-radius: 20px;
     margin: 1rem;
-    box-shadow: $left-box-shadow;
+    //box-shadow: $left-box-shadow;
+    box-shadow: $box-shadow;
     z-index: 2;
     background-color: $opasityOrnge;
     overflow: scroll;
@@ -90,7 +92,8 @@
       padding: 8px;
 
       &:hover {
-        box-shadow: $left-box-shadow;
+        //box-shadow: $left-box-shadow;
+        box-shadow: $box-shadow;
       }
     }
 
@@ -152,7 +155,23 @@
 }
 
 .category-article {
-  @include cardArticle;
+  // @include cardArticle;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  margin: 1rem;
+
+  box-shadow: $box-shadow;
+  border: 1px solid transparent;
+  border-radius: 20px;
+
+  &:hover {
+    border: 1px solid black;
+  }
+
+  h4:hover {
+    color: white;
+  }
 }
 
 ////// bubbles

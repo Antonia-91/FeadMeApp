@@ -54,7 +54,8 @@
 @mixin cardArticle {
   z-index: 2;
   margin: 1rem;
-  box-shadow: $left-box-shadow;
+  //box-shadow: $left-box-shadow;
+  box-shadow: $box-shadow;
   border: 1px solid transparent;
   border-radius: 20px;
 

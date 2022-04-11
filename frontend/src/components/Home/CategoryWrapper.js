@@ -12,15 +12,15 @@ const CategoryWrapper = () => {
        
       <NavLink className="nav-links" to="/breakfast">
         
-        <article className="category-article">
-          <img
+        <article className="category-article brekker">
+          {/* <img
             id="breakfast"
             src={brunch}
             width="200"
             height="200"
             alt="avocado sandwish"
             style={{ borderRadius: "20px" }}
-          />
+          /> */}
         </article>
       </NavLink>
       <NavLink className="nav-links" to="/lunch">

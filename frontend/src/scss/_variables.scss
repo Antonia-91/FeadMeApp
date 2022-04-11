@@ -29,4 +29,13 @@ $btn-background: -webkit-gradient(
   to(#f9d423)
 );
 
+$btn-background-grey: -webkit-gradient(
+  linear,
+  left top,
+  right top,
+  from(#ff4e50),
+  color-stop(50%, #f39c12),
+  to(#dfd9be)
+);
+
 /// SIZES

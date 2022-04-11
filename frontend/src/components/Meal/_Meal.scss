@@ -43,7 +43,7 @@
       }
     }
     .meal-header-saved {
-      background-color: orange;
+      background-color: rgba(255, 166, 0, 0.733);
       width: 40px;
       height: 40px;
       border-radius: 0px 0px 0px 20px;
@@ -147,7 +147,8 @@
     textarea {
       border-radius: 20px;
       padding: 1rem;
-      box-shadow: $left-box-shadow;
+      // box-shadow: $left-box-shadow;
+      box-shadow: $box-shadow;
       z-index: 1;
     }
 
@@ -157,11 +158,47 @@
     }
   }
 }
+////
+.date-holder {
+  background-color: rgba(255, 166, 0, 0.856);
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+  // box-shadow: $left-box-shadow;
+  box-shadow: $box-shadow;
+
+  input {
+    width: 200px;
+  }
+
+  .save_date_btn {
+    background: $btn-background-grey;
+    border: none;
+    padding: 12px;
+    border-radius: 40px;
+    color: white;
+
+    &:hover {
+      transform: scale(1.1);
+      background: linear-gradient(-90deg, #ff4e50, #f39c12 50%, #dfd9be);
+    }
+  }
+}
 
 ////
 @media screen and (max-width: 750px) {
   .meal-main {
     font-size: 12px;
+  }
+
+  .meal-header-saved {
+    margin-right: 1rem;
   }
   .meal-article {
     flex-wrap: wrap;
@@ -190,6 +227,10 @@
   .meal-main {
     width: fit-content;
   }
+  .meal-header-saved {
+    margin-right: 1rem;
+  }
+
   .meal-article {
     flex-wrap: wrap;
     max-width: 500px;

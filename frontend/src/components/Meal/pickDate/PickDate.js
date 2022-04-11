@@ -93,7 +93,7 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
           onChange={(e) => onChange(e.target.value)}
           value={value}
         />
-        <button onClick={submit}>save</button>
+        <button className="save_date_btn" onClick={submit}>save</button>
       </div>
     </>
   );
