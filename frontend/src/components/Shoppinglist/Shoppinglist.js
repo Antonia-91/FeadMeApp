@@ -97,7 +97,7 @@ const Shoppinglist = ({ logedin, setLogedin, todos, setTodos }) => {
             onChange={(e) => setReminder(e.currentTarget.checked)}
           />
         </div>
-        <div>
+        <div className="add-form-btn" >
           <button type="submit"> Add </button>
         </div>
       </form>

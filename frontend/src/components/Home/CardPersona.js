@@ -32,7 +32,7 @@ const CardPersona = ({ logedin }) => {
             <p> 71 beats/min</p>
           </span>
           <span>
-            <FaHamburger style={{ color: "#ff4e50;", fontSize: "20px" }} />
+            <FaHamburger style={{ color: "#ff4e50", fontSize: "20px" }} />
             <p> 1200 / 2800 kcal </p>
           </span>
           <span>

@@ -29,6 +29,12 @@
 .add-form {
   display: flex;
   flex-wrap: wrap;
+
+  .add-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .todo-content {

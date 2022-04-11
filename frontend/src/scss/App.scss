@@ -71,6 +71,28 @@ body {
   background-image: url("../backgroundImg/brekker.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 20px;
+}
+
+.lunch {
+  background-image: url(../backgroundImg/lunch2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.dinner {
+  background-image: url(../backgroundImg/dinner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.baking {
+  background-image: url(../backgroundImg/baking.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
 }
 
 ///// button
