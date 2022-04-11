@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FeadMeApp/static/css/main.1860f027.css",
-    "main.js": "/FeadMeApp/static/js/main.8122a43c.js",
+    "main.css": "/FeadMeApp/static/css/main.5a823022.css",
+    "main.js": "/FeadMeApp/static/js/main.61cec9ea.js",
     "static/js/787.cda612ba.chunk.js": "/FeadMeApp/static/js/787.cda612ba.chunk.js",
     "static/media/oranges2.png": "/FeadMeApp/static/media/oranges2.4515f643b06405a3a889.png",
     "static/media/lunch.jpg": "/FeadMeApp/static/media/lunch.a9d5b48c26050fc64da2.jpg",
@@ -13,12 +13,12 @@
     "static/media/iphone2.png": "/FeadMeApp/static/media/iphone2.c12f9cd7acd5f68da3d7.png",
     "static/media/bubbla.png": "/FeadMeApp/static/media/bubbla.bb266c632993a80d0ede.png",
     "index.html": "/FeadMeApp/index.html",
-    "main.1860f027.css.map": "/FeadMeApp/static/css/main.1860f027.css.map",
-    "main.8122a43c.js.map": "/FeadMeApp/static/js/main.8122a43c.js.map",
+    "main.5a823022.css.map": "/FeadMeApp/static/css/main.5a823022.css.map",
+    "main.61cec9ea.js.map": "/FeadMeApp/static/js/main.61cec9ea.js.map",
     "787.cda612ba.chunk.js.map": "/FeadMeApp/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1860f027.css",
-    "static/js/main.8122a43c.js"
+    "static/css/main.5a823022.css",
+    "static/js/main.61cec9ea.js"
   ]
 }
