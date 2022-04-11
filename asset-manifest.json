@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/FeadMeApp/static/css/main.eafcb2fa.css",
+    "main.css": "/FeadMeApp/static/css/main.ac54e6b4.css",
     "main.js": "/FeadMeApp/static/js/main.67bc4302.js",
     "static/js/787.cda612ba.chunk.js": "/FeadMeApp/static/js/787.cda612ba.chunk.js",
     "static/media/lunch2.jpg": "/FeadMeApp/static/media/lunch2.4ffccf383237578916d3.jpg",
@@ -14,12 +14,12 @@
     "static/media/iphone2.png": "/FeadMeApp/static/media/iphone2.c12f9cd7acd5f68da3d7.png",
     "static/media/bubbla.png": "/FeadMeApp/static/media/bubbla.bb266c632993a80d0ede.png",
     "index.html": "/FeadMeApp/index.html",
-    "main.eafcb2fa.css.map": "/FeadMeApp/static/css/main.eafcb2fa.css.map",
+    "main.ac54e6b4.css.map": "/FeadMeApp/static/css/main.ac54e6b4.css.map",
     "main.67bc4302.js.map": "/FeadMeApp/static/js/main.67bc4302.js.map",
     "787.cda612ba.chunk.js.map": "/FeadMeApp/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eafcb2fa.css",
+    "static/css/main.ac54e6b4.css",
     "static/js/main.67bc4302.js"
   ]
 }
