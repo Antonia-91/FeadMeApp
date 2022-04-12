@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Pagenotfount from "../pagenotfount";
 import { NavLink } from "react-router-dom";
 import Meals from "../Meals/Meals";
 
@@ -20,7 +21,12 @@ const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
       .then((data) => data.json())
       .then((data) => setMeals(data.meals));
   };
-
+  if (!meals)
+    return (
+      <main className="search-main">
+       <Pagenotfount/>
+      </main>
+    );
   return (
     <main className="search-main">
       <div className="seach-section">
