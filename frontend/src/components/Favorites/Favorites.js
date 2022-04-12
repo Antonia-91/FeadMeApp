@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaYoutube } from "react-icons/fa";
 import { FaHeartBroken } from "react-icons/fa";
@@ -55,7 +55,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
     );
     const data = await res.json();
     console.log(data);
-    /// filtrera array favoriter. sortera ut den somhar samma id som vi precis raderat
+    /// filter array favorites. sort out the one who has the same ID that we just deleted
     if ((data.message = "success")) {
       let filtered = favorites.filter(
         (fav) => fav.meals[0].idMeal != obj.mealId
@@ -63,12 +63,12 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
       console.log("filtered", filtered);
       setFavorites(filtered);
 
-      /// plocka ut alla favoriters id, gör till en sträng och (join)
+      /// pick out all the favorites' id, make a string and (join)
       let sliceFiltered = filtered.map((fav) => fav.meals[0].idMeal);
       console.log("sliceFiltered", sliceFiltered);
       let join = sliceFiltered.join();
 
-      /// tag våran joinade sträng och uppdatera våran logiedin user ( user_favs : join)
+      /// take our joined string and update our logiedin user (user_favs: join)
       let updateUserInfo = {
         userName: logedin.userName,
         userPass: logedin.userPass,
@@ -80,7 +80,12 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
     }
   };
 
-  if (!Favorites) return null;
+  if (!Favorites)
+    return (
+      <main className="favorite-main">
+        <h1> You dont have any favorites yet...</h1>
+      </main>
+    );
   return (
     <main className="favorite-main">
       <h2>My Favorites</h2>
