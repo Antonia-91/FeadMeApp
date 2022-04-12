@@ -2,7 +2,7 @@
 
 Explore foods from around the globe
 
- <img src="./FeadmeApp-screenshot.png" width="350" title="hover text">
+ <img src="/FeadmeApp-screenshot.png" width="350" title="hover text">
 
 ## Table of contents
 
