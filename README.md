@@ -2,43 +2,48 @@
 
 Explore foods from around the globe
 
-## backend
-
-. heroku restart
-
-## frontend
-
-. npm run deploy or npm run build?
-
-
+ <img src="./FeadmeApp-screenshot.png" width="350" title="hover text">
 
 ## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
+
+- [General info](#general-info)
+- [Technologies](#technologies)
+- [Setup](#setup)
 
 ## General info
 
-
 <p align="center">
-FeadMeApp is a degree project for my education as a Frontend Developer at the Media Institute. The project's frontend is built in React, the backend in Node.js and MySQL. The database is built in PhpMyAdmin. Right now I'm using the "themealdb" API to get recipe search results. But I also start collecting my own recipes and build my own API. These recipes are presented under "categories on the Home page". The database with these recipes is currently hard-coded in separate files under the Backend folder
-  <img src="/Volumes/Samsung_T5/Front End Developing /JavaScript/projects /examen/examensProject/frontend/FeadmeApp-screenshot.png" width="350" title="hover text">
-
+FeadMeApp is a degree project for my education as a Frontend Developer at the Media Institute. The project's frontend is built in React, the backend in Node.js and MySQL. The database is built in PhpMyAdmin. The Backend server is hosting on Heroku and the frontEnd is deployed at githubPages. 
+<br>
+ Right now I'm using the "themealdb" API to get recipe search results. But I also start collecting my own recipes and build my own API. These recipes are presented under "categories on the Home page". The database with these recipes is currently hard-coded in separate files under the Backend folder
+ 
 </p>
 
-
-	
 ## Technologies
+
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
-	
+
+- react version: "^17.0.2",
+- sass version: "^1.49.9",
+- expres version: "^4.17.3",
+- mysql2 version: "^2.3.3",
+
 ## Setup
+
 To run this project, install it locally using npm:
 
+### backend
+
 ```
-$ cd ../lorem
+$ cd ./backend
 $ npm install
-$ npm start
+$ heroku restart or  node server.js 
+```
+
+### frontend
+
+```
+$ cd ./frontend
+$ npm install
+$ npm run deploy  or npm start
 ```
