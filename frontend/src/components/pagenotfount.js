@@ -1,9 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 const Pagenotfount = () => {
-  const navigate = useNavigate();
-
   const refreshPage = () => {
     window.location.reload();
   };

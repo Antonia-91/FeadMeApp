@@ -6,53 +6,23 @@ const Footer = () => {
     <aside>
       <div className="footer-div">
         <NavLink to="/about">
-          <p
-          // style={{
-          //   writingMode: "vertical-rl",
-          // }}
-          >
-            Contact
-          </p>
+          <p>Contact</p>
         </NavLink>
         <NavLink to="/about">
-          <p
-          // style={{
-          //   writingMode: "vertical-rl",
-          // }}
-          >
-            API
-          </p>
+          <p>API</p>
         </NavLink>
 
         <NavLink to="/about">
           {" "}
-          <p
-          // style={{
-          //   writingMode: "vertical-rl",
-          // }}
-          >
-            About
-          </p>
+          <p>About</p>
         </NavLink>
 
         <NavLink to="/about">
           {" "}
-          <p
-          // style={{
-          //   writingMode: "vertical-rl",
-          // }}
-          >
-            Cookies
-          </p>
+          <p>Cookies</p>
         </NavLink>
         <NavLink to="/about">
-          <p
-          // style={{
-          //   writingMode: "vertical-rl",
-          // }}
-          >
-            &copy; 2022 Antonia Pettersson
-          </p>
+          <p>&copy; 2022 Antonia Pettersson</p>
         </NavLink>
       </div>
     </aside>

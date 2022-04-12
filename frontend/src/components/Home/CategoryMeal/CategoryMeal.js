@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, NavLink, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const CategoryMeal = () => {
-  const [meal, setMeal] = useState();
+ 
   const navigate = useNavigate();
 
   // get id from URL

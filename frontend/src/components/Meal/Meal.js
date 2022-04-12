@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PickDate from "./pickDate/PickDate";
-import { NavLink, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { FaYoutube, FaCalendar } from "react-icons/fa";
 import Form from "./Form";
 
@@ -108,7 +108,7 @@ const Meal = ({ logedin, todos, setTodos, dates, setDates }) => {
 
 export default Meal;
 
-// /// cunter
+// /// counter
 // const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // console.log(array.length);
 // console.log(meal?.strIngredient1);

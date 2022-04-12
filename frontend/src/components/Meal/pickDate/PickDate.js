@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import DatePicker from "react-date-picker";
 import { useParams } from "react-router-dom";
 
 const PickDate = ({ meal, logedin, dates, setDates }) => {
@@ -7,9 +6,6 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
   const [day, setDay] = useState();
   console.log(value);
 
-  //   const [dateValue, onChangeDate] = useState(
-  //     new Date().toISOString().slice(0, 10)
-  //   );
 
   // Weekdays
   const weekenDays = [
@@ -60,7 +56,7 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
 
     console.log(obj);
 
-    /// call func that POST ti backend
+    /// call func that POST to backend
     await savDate(obj);
   };
 

@@ -80,12 +80,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
     }
   };
 
-  if (!Favorites)
-    return (
-      <main className="favorite-main">
-        <h1> You dont have any favorites yet...</h1>
-      </main>
-    );
+  if (!Favorites) return null;
   return (
     <main className="favorite-main">
       <h2>My Favorites</h2>

@@ -7,7 +7,7 @@ const Form = ({ logedin, todos, setTodos }) => {
   /// on submit form
   const onsubmit = async (e) => {
     e.preventDefault();
-    // ehere there in an linebrake , split string
+    // where there is a linebrake , split string
     splitString = string.split("\n"); // or (",")
 
     let arrayToServer = [];
@@ -41,6 +41,7 @@ const Form = ({ logedin, todos, setTodos }) => {
 
     console.log(data);
     console.log(arrayToServer.length);
+    /// update frontend todo sate, foreach new todo (arraytoserver.length) 
     if (data.message === "ok") {
       for (let i = 0; i < arrayToServer.length; i++) {
         let updateTodo = {

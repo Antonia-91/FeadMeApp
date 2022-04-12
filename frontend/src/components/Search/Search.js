@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Pagenotfount from "../pagenotfount";
-import { NavLink } from "react-router-dom";
 import Meals from "../Meals/Meals";
 
 const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [meals, setMeals] = useState([]);
-  const [updatedFavs, setUdatedFavs] = useState();
+
   console.log(meals);
 
   /// fetch meals
@@ -24,7 +23,7 @@ const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
   if (!meals)
     return (
       <main className="search-main">
-       <Pagenotfount/>
+        <Pagenotfount />
       </main>
     );
   return (

@@ -4,6 +4,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaHeartBroken } from "react-icons/fa";
 
 const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
+  
   /// add to fav
   const addFav = async (id) => {
     console.log(id);
