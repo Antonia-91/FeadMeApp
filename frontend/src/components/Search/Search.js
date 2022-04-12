@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Pagenotfount from "../pagenotfount";
 import Meals from "../Meals/Meals";
 
+/// -- images ---///
+import bubble from "./images/bubbla.png";
+
 const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [meals, setMeals] = useState([]);
@@ -50,6 +53,12 @@ const Search = ({ logedin, setLogedin, favorites, setFavorites }) => {
           setFavorites={setFavorites}
         />
       </section>
+      <div className="bubbles">
+        <img src={bubble} alt="orange bubble" />
+        <img src={bubble} alt="orange bubble" />
+        <img src={bubble} alt="orange bubble" />
+        <img src={bubble} alt="orange bubble" />
+      </div>
     </main>
   );
 };

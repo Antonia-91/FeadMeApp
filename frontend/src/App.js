@@ -57,6 +57,7 @@ function App() {
                 }
               />
             )}
+
             {logedin && <Route path="/breakfast" element={<Brekker />} />}
             {logedin && <Route path="/lunch" element={<Lunch />} />}
             {logedin && <Route path="/dinner" element={<Dinner />} />}
@@ -118,7 +119,6 @@ function App() {
                 }
               />
             )}
-          
 
             <Route
               path="/login"
