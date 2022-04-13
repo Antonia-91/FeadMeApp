@@ -1,24 +1,32 @@
 {
   "files": {
-    "main.css": "/FeadMeApp/static/css/main.b7520afe.css",
-    "main.js": "/FeadMeApp/static/js/main.db533e57.js",
+    "main.css": "/FeadMeApp/static/css/main.ec169a59.css",
+    "main.js": "/FeadMeApp/static/js/main.ed40a430.js",
     "static/js/787.cda612ba.chunk.js": "/FeadMeApp/static/js/787.cda612ba.chunk.js",
     "static/media/lunch2.jpg": "/FeadMeApp/static/media/lunch2.4ffccf383237578916d3.jpg",
     "static/media/oranges2.png": "/FeadMeApp/static/media/oranges2.4515f643b06405a3a889.png",
+    "static/media/img8.png": "/FeadMeApp/static/media/img8.cf1b0fbd85ae6bbf0a21.png",
+    "static/media/img6.png": "/FeadMeApp/static/media/img6.55b168aec252f343211f.png",
+    "static/media/img2.png": "/FeadMeApp/static/media/img2.cdf954204e1413a49e69.png",
     "static/media/dinner.jpg": "/FeadMeApp/static/media/dinner.3c333cb9f29e52961c20.jpg",
     "static/media/brekker.jpg": "/FeadMeApp/static/media/brekker.61018b0f200c935c6616.jpg",
+    "static/media/img4.png": "/FeadMeApp/static/media/img4.c91ba1c683b257c4562e.png",
+    "static/media/img3.png": "/FeadMeApp/static/media/img3.fa27fcf143c1ae44d989.png",
+    "static/media/img7.png": "/FeadMeApp/static/media/img7.47d7949f65aa8be74226.png",
+    "static/media/img5.png": "/FeadMeApp/static/media/img5.1ffbf4ed6f6f3197965d.png",
+    "static/media/img1.png": "/FeadMeApp/static/media/img1.f89b0bfef6ba31d7f27b.png",
     "static/media/baking.jpg": "/FeadMeApp/static/media/baking.24f2840c8a5603d137b6.jpg",
     "static/media/web3.png": "/FeadMeApp/static/media/web3.e172ed44663fdc108100.png",
     "static/media/ipad3.png": "/FeadMeApp/static/media/ipad3.c6bdb4a64531ffbcab29.png",
     "static/media/iphone2.png": "/FeadMeApp/static/media/iphone2.c12f9cd7acd5f68da3d7.png",
     "static/media/bubbla.png": "/FeadMeApp/static/media/bubbla.bb266c632993a80d0ede.png",
     "index.html": "/FeadMeApp/index.html",
-    "main.b7520afe.css.map": "/FeadMeApp/static/css/main.b7520afe.css.map",
-    "main.db533e57.js.map": "/FeadMeApp/static/js/main.db533e57.js.map",
+    "main.ec169a59.css.map": "/FeadMeApp/static/css/main.ec169a59.css.map",
+    "main.ed40a430.js.map": "/FeadMeApp/static/js/main.ed40a430.js.map",
     "787.cda612ba.chunk.js.map": "/FeadMeApp/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7520afe.css",
-    "static/js/main.db533e57.js"
+    "static/css/main.ec169a59.css",
+    "static/js/main.ed40a430.js"
   ]
 }
