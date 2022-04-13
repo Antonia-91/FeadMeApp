@@ -29,6 +29,9 @@ router.post("/saveDate", (req, res) => {
     });
   });
 
+  // INSERT INTO `dateTable`( `date`, `day`, `meal_id`, `meal_title`, `user_id`) VALUES ('2022-04-20','Sunday', '52962','Salmon Eggs Eggs Benedict',2)
+
+
   // day: 'Sunday',
   // date: '2022-03-20',
   // mealId: '52955',

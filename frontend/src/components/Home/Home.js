@@ -13,6 +13,8 @@ const Home = ({ todos, logedin, dates, setDates }) => {
   const mounth = currentDate.getMonth() + 1;
   let mounthFromServer = [];
 
+  console.log(mounth, "&", dates, mounthFromServer)
+
   useEffect(() => {
     //console.log(currentDate, mounth);
     const getAllDates = async () => {

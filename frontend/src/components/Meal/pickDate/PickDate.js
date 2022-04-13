@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 
 const PickDate = ({ meal, logedin, dates, setDates }) => {
   const [value, setValue] = useState(new Date().toISOString().slice(0, 10));
-  const [day, setDay] = useState();
   console.log(value);
-
 
   // Weekdays
   const weekenDays = [
@@ -31,19 +29,22 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
 
   /// collect pices and buid an obj to send to server
   const submit = async () => {
-    console.log(value);
+    console.log(typeof value);
 
     let day1 = value[8];
     let day2 = value[9];
     let day = day1.concat(day2);
-    //console.log(day);
+    console.log(day);
 
-    /// save as a number
-    setDay(parseInt(day));
-
+   
     /// give day a weekday-name
     let weekday = weekenDays[day % weekenDays.length];
     //console.log(weekday);
+
+    /// take value string and replce "-" to " "
+    // let replace1 = value.replace("-", " ");
+    // let replace2 = replace1.replace("-", " ");
+    // console.log(replace2);
 
     /// create a obj to send Db
     obj = {
@@ -62,6 +63,7 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
 
   ///  Post date
   // https://feadmeapp-examen-project.herokuapp.com/saveDate
+  // "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/saveDate"
   // http://localhost:5005/saveDate
   const savDate = async (obj) => {
     const res = await fetch(
@@ -98,40 +100,3 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
 };
 
 export default PickDate;
-
-{
-  /* <div>
-        <h3>Add this recepie to my calendar</h3>
-        <DatePicker
-          style={{ color: "black", backgroundColor: "orange" }}
-          placeholder="pick a date "
-          dateFormat="YYYY-MM-DD"
-          onChange={onChange}
-          value={value}
-        />
-      </div> */
-}
-
-// // get date
-// const date = `${value.getFullYear()}- 0${
-//   value.getMonth() + 1
-// }- ${value.getDate()}`;
-
-// // get mounth
-// const mounth = ` ${value.getMonth()} `;
-
-// // give day a name
-// let num = `${value.getDay()}`;
-// let day = weekenDays[num];
-
-// console.log("mounth:", mounth, "date", date, "day:", day);
-
-// let obj = {
-//   day: day,
-//   date: date,
-//   mealId: id,
-//   meal: meal,
-//   user_id: logedin.user_id,
-// };
-
-// console.log(obj);

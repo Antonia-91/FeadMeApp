@@ -32,10 +32,15 @@ I am using the free version of https://www.themealdb.com/.... Right now I am usi
 
 Project is created with:
 
-- react version: "^17.0.2",
+- react version: "^17.0.2", 
 - sass version: "^1.49.9",
 - expres version: "^4.17.3",
 - mysql2 version: "^2.3.3",
+
+- WHY REACT:  React library brings fast and dynamic websites using JavaScript. React felt for me from the beginnig easy to understand, easily integrable UI components that reduce my time and provide a responsive user interface for website, web app and mobile app.
+With the assistance of features such as Virtual DOMs, JSX, impressive state management, and reusable components independent of each other, React was an easy choice for me! 
+
+
 
 ## Setup
 

@@ -22,13 +22,21 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: true }));
+//app.use(cors({ origin: true }));
+app.use(
+  cors({
+    origin: ["https://antonia-91.github.io/FeadMeApp/"],
+    methods: ["GET", "POST", "DELETE"],
+    credentials: true,
+    origin: true,
+  })
+);
+
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 );
-
 
 /// use this?
 app.use(express.static(path.join(__dirname, "build")));
