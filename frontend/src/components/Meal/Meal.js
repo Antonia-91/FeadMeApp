@@ -108,18 +108,3 @@ const Meal = ({ logedin, todos, setTodos, dates, setDates }) => {
 
 export default Meal;
 
-// /// counter
-// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// console.log(array.length);
-// console.log(meal?.strIngredient1);
-
-// let newArray = [];
-
-// for (let i = 0; i < array.length; i++) {
-//   ///console.log("strIngredient" + [i]);
-//   newArray = ["strIngredient" + [i]];
-//   console.log(newArray);
-//   //console.log(meal?.strIngredient[i]);
-// }
-// console.log(newArray);
-// console.log(meal?.newArray);

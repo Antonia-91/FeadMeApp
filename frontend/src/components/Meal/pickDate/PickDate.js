@@ -36,15 +36,10 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
     let day = day1.concat(day2);
     console.log(day);
 
-   
     /// give day a weekday-name
     let weekday = weekenDays[day % weekenDays.length];
     //console.log(weekday);
 
-    /// take value string and replce "-" to " "
-    // let replace1 = value.replace("-", " ");
-    // let replace2 = replace1.replace("-", " ");
-    // console.log(replace2);
 
     /// create a obj to send Db
     obj = {
@@ -58,24 +53,22 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
     console.log(obj);
 
     /// call func that POST to backend
-    await savDate(obj);
+    await saveDate(obj);
   };
 
   ///  Post date
   // https://feadmeapp-examen-project.herokuapp.com/saveDate
-  // "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/saveDate"
-  // http://localhost:5005/saveDate
-  const savDate = async (obj) => {
-    const res = await fetch(
-      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/saveDate",
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(obj),
-      }
-    );
+  // "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/savedate"
+  // http://localhost:5005/savedate
+
+  const saveDate = async (obj) => {
+    const res = await fetch("https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/savedate", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    });
     const data = await res.json();
     console.log(data);
     //alert(value);
@@ -100,3 +93,10 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
 };
 
 export default PickDate;
+
+
+
+    /// take value string and replce "-" to " "
+    // let replace1 = value.replace("-", " ");
+    // let replace2 = replace1.replace("-", " ");
+    // console.log(replace2);

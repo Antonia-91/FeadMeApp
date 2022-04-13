@@ -76,7 +76,7 @@ app.locals.con = mysql.createConnection({
   user: "bd625d758bc100",
   password: "b944cdea",
   database: "heroku_f18251a49332320",
-  dialect: "mysql",
+  dialect: "mysql2",
 });
 
 app.listen(process.env.PORT || 5005, () => {

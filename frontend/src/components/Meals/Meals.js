@@ -4,7 +4,6 @@ import { FaYoutube } from "react-icons/fa";
 import { FaHeartBroken } from "react-icons/fa";
 
 const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
-  
   /// add to fav
   const addFav = async (id) => {
     console.log(id);
@@ -18,20 +17,17 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
   };
 
   /// post fav to Db
-  // https://corsanywhere.herokuapp.com/ ?
   // https://feadmeapp-examen-project.herokuapp.com/addFav
+  // https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addFav
   // `http://localhost:5005/addFav`
   const fecthFav = async (obj) => {
-    const res = await fetch(
-      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addFav`,
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(obj),
-      }
-    );
+    const res = await fetch(`http://localhost:5005/addFav`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    });
     const data = await res.json();
     console.log(data);
     let result = data.data;

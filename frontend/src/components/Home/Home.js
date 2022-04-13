@@ -6,14 +6,14 @@ import MiddleSection from "./MiddleSection";
 import Box from "./Box";
 import CategoryWrapper from "./CategoryWrapper";
 
-const Home = ({ todos, logedin, dates, setDates }) => {
+const Home = ({ todos, logedin, dates, setDates, url }) => {
   const [showAll, setShowAll] = useState(true);
   const [showThisMounth, setShowThisMounth] = useState(false);
   const currentDate = new Date();
   const mounth = currentDate.getMonth() + 1;
   let mounthFromServer = [];
 
-  console.log(mounth, "&", dates, mounthFromServer)
+  console.log(mounth, "&", dates, mounthFromServer);
 
   useEffect(() => {
     //console.log(currentDate, mounth);
@@ -27,6 +27,7 @@ const Home = ({ todos, logedin, dates, setDates }) => {
 
   /// fetch all Dates
   //https://feadmeapp-examen-project.herokuapp.com/date/${id}
+  // https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/date/${id}
   //`http://localhost:5005/date/${id}`
   const fechAllDates = async (id) => {
     const res = await fetch(
@@ -53,13 +54,16 @@ const Home = ({ todos, logedin, dates, setDates }) => {
     setShowAll((presState) => !presState);
   };
 
-  //// on delete    https://feadmeapp-examen-project.herokuapp.com/date/${id}
+  //// on delete   
+  //  https://feadmeapp-examen-project.herokuapp.com/date/${id}
+  // https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/date/${id}
+  // `http://localhost:5005/date/${id}`
   const onDelete = async (id) => {
     console.log(id);
 
     if (window.confirm("delete this date?")) {
       await fetch(
-        `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/date/${id} `,
+        `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/date/${id}`,
         {
           method: "DELETE",
         }

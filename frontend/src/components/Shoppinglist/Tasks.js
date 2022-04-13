@@ -5,15 +5,17 @@ const Tasks = ({ todos, setTodos, reminder }) => {
   //// Fetch one todo
   // https://feadmeapp-examen-project.herokuapp.com/todo/${id}
   // http://localhost:5005/todo/${id}
+  // https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/todo/${id}
   const fetchTodo = async (id) => {
     const res = await fetch(
-      ` https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/todo/${id}`
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/todo/${id}`
     );
     const data = await res.json();
     //console.log(data);
     return data;
   };
 
+  // on doubble click, update task
   const onDoubbleClick = async (id) => {
     const todoToToggle = await fetchTodo(id);
     console.log(todoToToggle);
@@ -24,7 +26,7 @@ const Tasks = ({ todos, setTodos, reminder }) => {
     console.log(updateTask);
 
     const res = await fetch(
-      ` https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/todo/${id}`,
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/todo/${id}`,
       {
         method: "POST",
         headers: {

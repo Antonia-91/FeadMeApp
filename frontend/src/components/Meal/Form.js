@@ -24,24 +24,23 @@ const Form = ({ logedin, todos, setTodos }) => {
     setString("");
   };
 
-  /// post shoppinglist   addToShopingList    https://feadmeapp-examen-project.herokuapp.com/addMultiTodos
+  /// post shoppinglist   addToShopingList   
+  // https://feadmeapp-examen-project.herokuapp.com/addMultiTodos
   // http://localhost:5005/addMultiTodos
+  // https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addMultiTodos
   const fetchShoppinglist = async (arrayToServer) => {
-    const res = await fetch(
-      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addMultiTodos",
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(arrayToServer),
-      }
-    );
+    const res = await fetch("https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addMultiTodos", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(arrayToServer),
+    });
     const data = await res.json();
 
     console.log(data);
     console.log(arrayToServer.length);
-    /// update frontend todo sate, foreach new todo (arraytoserver.length) 
+    /// update frontend todo sate, foreach new todo (arraytoserver.length)
     if (data.message === "ok") {
       for (let i = 0; i < arrayToServer.length; i++) {
         let updateTodo = {

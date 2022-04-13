@@ -26,6 +26,7 @@ const Login = ({ setUser, user }) => {
 
   /// on login
   // https://feadmeapp-examen-project.herokuapp.com/login
+  // https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/login
   // http://localhost:5005/login
   const onLogin = async (userToLogin) => {
     const res = await fetch(

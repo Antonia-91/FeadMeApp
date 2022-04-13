@@ -19,6 +19,10 @@ import "./css/App.css";
 import About from "./components/Footer/About";
 
 function App() {
+  //---- Global variables ----//
+  let url = "http://localhost:5005";
+  // let url = "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com" 
+
   const [user, setUser] = useState();
   const [logedin, setLogedin] = useState();
   const [todos, setTodos] = useState([]);
@@ -49,6 +53,7 @@ function App() {
                 path="/home"
                 element={
                   <Home
+                  url ={url}
                     logedin={logedin}
                     todos={todos}
                     dates={dates}
