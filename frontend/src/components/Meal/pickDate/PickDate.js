@@ -40,7 +40,6 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
     let weekday = weekenDays[day % weekenDays.length];
     //console.log(weekday);
 
-
     /// create a obj to send Db
     obj = {
       day: weekday,
@@ -62,13 +61,16 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
   // http://localhost:5005/savedate
 
   const saveDate = async (obj) => {
-    const res = await fetch("https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/savedate", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    const res = await fetch(
+      "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/sparadatum",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     const data = await res.json();
     console.log(data);
     //alert(value);
@@ -94,9 +96,7 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
 
 export default PickDate;
 
-
-
-    /// take value string and replce "-" to " "
-    // let replace1 = value.replace("-", " ");
-    // let replace2 = replace1.replace("-", " ");
-    // console.log(replace2);
+/// take value string and replce "-" to " "
+// let replace1 = value.replace("-", " ");
+// let replace2 = replace1.replace("-", " ");
+// console.log(replace2);

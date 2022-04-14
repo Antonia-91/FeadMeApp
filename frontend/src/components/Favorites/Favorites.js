@@ -39,7 +39,6 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
   };
 
   //// post remove to Db
-  //  https://corsanywhere.herokuapp.com/ ?
   /// https://feadmeapp-examen-project.herokuapp.com/removeFav
   // http://localhost:5005/removeFav
   const removeFavorite = async (obj) => {
@@ -87,7 +86,7 @@ const Favorites = ({ logedin, setLogedin, favorites, setFavorites }) => {
       <section className="favorite-wrapper">
         {favorites.map((fav) => (
           <article className="favorite-article" key={fav.meals[0].idMeal}>
-            <img src={fav.meals[0].strMealThumb} alt="#" />
+            <img src={fav.meals[0].strMealThumb} alt={fav.meals[0].strMeal} />
             <div className="favorite-info">
               <NavLink to={`/${fav.meals[0].idMeal}`}>
                 <h4> {fav.meals[0].strMeal.slice(" ", 20)}...</h4>

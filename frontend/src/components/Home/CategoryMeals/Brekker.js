@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import Meals from "../Meals.js";
+import Meals from "./Meals.js";
 
 const Brekker = () => {
   const [category, setCategory] = useState();

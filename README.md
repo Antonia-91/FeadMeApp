@@ -52,6 +52,8 @@ To run this project, install it locally using npm:
 $ cd ./backend
 $ npm install
 $ heroku restart or  node server.js 
+$ how I deployed on Heroku : https://www.youtube.com/watch?v=lwOsI8LtVEQ&t=1521s&ab_channel=PedroTech 
+
 ```
 
 ### frontend

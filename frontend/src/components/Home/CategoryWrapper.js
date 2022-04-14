@@ -1,29 +1,28 @@
 import { NavLink } from "react-router-dom";
 
-
 const CategoryWrapper = () => {
   return (
     <>
-      <NavLink className="nav-links" to="/breakfast">
-        <article className="category-article brekker">
+      <article className="category-article brekker">
+        <NavLink className="nav-links" to="/breakfast">
           <h2>Brekker</h2>
-        </article>
-      </NavLink>
-      <NavLink className="nav-links" to="/lunch">
-        <article className="category-article lunch">
+        </NavLink>
+      </article>
+      <article className="category-article lunch">
+        <NavLink className="nav-links" to="/lunch">
           <h2>Lunch</h2>
-        </article>
-      </NavLink>
-      <NavLink className="nav-links" to="/dinner">
-        <article className="category-article dinner">
+        </NavLink>
+      </article>
+      <article className="category-article dinner">
+        <NavLink className="nav-links" to="/dinner">
           <h2>Dinner</h2>
-        </article>
-      </NavLink>
-      <NavLink className="nav-links" to="/baking">
-        <article className="category-article baking">
+        </NavLink>
+      </article>
+      <article className="category-article baking">
+        <NavLink className="nav-links" to="/baking">
           <h2>Baking</h2>
-        </article>
-      </NavLink>
+        </NavLink>
+      </article>
     </>
   );
 };

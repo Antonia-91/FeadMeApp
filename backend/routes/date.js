@@ -46,7 +46,7 @@ router.delete("/date/:id", (req, res) => {
 });
 
 /// post new date
-router.post("/savedate", (req, res) => {
+router.post("/sparadatum", (req, res) => {
   console.log(req.body);
 
   const date = req.body.date;

@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 
-import Meals from "../Meals.js";
+import Meals from "./Meals.js";
 
-const Lunch = () => {
+const Dinner = () => {
   const [category, setCategory] = useState();
 
   useEffect(() => {
     fetchCategory();
   }, []);
 
-  //// fetchBrekker    https://feadmeapp-examen-project.herokuapp.com/lunch
+  //// fetchBrekker   https://feadmeapp-examen-project.herokuapp.com/dinner
   const fetchCategory = async () => {
     const res = await fetch(
-      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/lunch`
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/dinner`
     );
     const data = await res.json();
-    console.log(data.lunch);
-    setCategory(data.lunch);
+    console.log(data.dinner);
+    setCategory(data.dinner);
   };
   console.log(category);
   if (!{ category }) return;
@@ -24,11 +24,11 @@ const Lunch = () => {
   return (
     <main className="home-main">
       <header>
-        <h2>Lunch</h2>
+        <h2>Dinner</h2>
       </header>
       <Meals category={category} />
     </main>
   );
 };
 
-export default Lunch;
+export default Dinner;

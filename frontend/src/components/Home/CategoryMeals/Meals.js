@@ -7,7 +7,7 @@ const Meals = ({category}) => {
     <section className="meals-wrapper">
       {category?.map((meal) => (
         <article className="meals-article" key={meal.idMeal}>
-          <img src={meal.strMealThumb} />
+          <img src={meal.strMealThumb} alt={meal.title} />
           <div className="meals-info">
             <NavLink to={`/category/${meal.idMeal}`}>
               <h4>{meal.title.split(" ", 3)}...</h4>

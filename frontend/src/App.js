@@ -8,11 +8,11 @@ import Meal from "./components/Meal/Meal";
 import Navbar from "./components/Navbar/Navbar";
 import Search from "./components/Search/Search";
 import Shoppinglist from "./components/Shoppinglist/Shoppinglist";
-import Brekker from "./components/Home/CategoryMeal/Brekker/Brekker";
-import Lunch from "./components/Home/CategoryMeal/Lunch/Lunch";
-import Dinner from "./components/Home/CategoryMeal/Dinner/Dinner";
-import Baking from "./components/Home/CategoryMeal/Baking/Baking";
-import CategoryMeal from "./components/Home/CategoryMeal/CategoryMeal";
+import Brekker from "./components/Home/CategoryMeals/Brekker";
+import Lunch from "./components/Home/CategoryMeals/Lunch";
+import Dinner from "./components/Home/CategoryMeals/Dinner";
+import Baking from "./components/Home/CategoryMeals/Baking";
+import CategoryMeal from "./components/Home/CategoryMeals/CategoryMeal";
 import Footer from "./components/Footer/Footer";
 
 import "./css/App.css";
@@ -21,7 +21,7 @@ import About from "./components/Footer/About";
 function App() {
   //---- Global variables ----//
   let url = "http://localhost:5005";
-  // let url = "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com" 
+  // let url = "https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com"
 
   const [user, setUser] = useState();
   const [logedin, setLogedin] = useState();
@@ -53,7 +53,7 @@ function App() {
                 path="/home"
                 element={
                   <Home
-                  url ={url}
+                    url={url}
                     logedin={logedin}
                     todos={todos}
                     dates={dates}

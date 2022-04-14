@@ -1,32 +1,34 @@
 import React, { useState, useEffect } from "react";
-import Meals from "../Meals.js";
 
-const Baking = () => {
+import Meals from "./Meals.js";
+
+const Lunch = () => {
   const [category, setCategory] = useState();
 
   useEffect(() => {
     fetchCategory();
   }, []);
 
-  //// fetchBrekker https://feadmeapp-examen-project.herokuapp.com/baking
+  //// fetchBrekker    https://feadmeapp-examen-project.herokuapp.com/lunch
   const fetchCategory = async () => {
     const res = await fetch(
-      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/baking`
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/lunch`
     );
     const data = await res.json();
-    console.log(data.baking);
-    setCategory(data.baking);
+    console.log(data.lunch);
+    setCategory(data.lunch);
   };
   console.log(category);
   if (!{ category }) return;
+
   return (
     <main className="home-main">
       <header>
-        <h2>Baking</h2>
+        <h2>Lunch</h2>
       </header>
       <Meals category={category} />
     </main>
   );
 };
 
-export default Baking;
+export default Lunch;
