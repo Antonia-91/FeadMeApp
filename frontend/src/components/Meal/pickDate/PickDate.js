@@ -31,10 +31,9 @@ const PickDate = ({ meal, logedin, dates, setDates }) => {
   const submit = async () => {
     console.log(typeof value);
 
-    let day1 = value[8];
-    let day2 = value[9];
-    let day = day1.concat(day2);
-    console.log(day);
+    let day1 = value[8]; // console.log(day1)
+    let day2 = value[9]; //console.log(day2)
+    let day = day1.concat(day2); //console.log(day)
 
     /// give day a weekday-name
     let weekday = weekenDays[day % weekenDays.length];
