@@ -21,13 +21,16 @@ const Meals = ({ meals, logedin, setLogedin, favorites, setFavorites }) => {
   // https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addFav
   // `http://localhost:5005/addFav`
   const fecthFav = async (obj) => {
-    const res = await fetch(`http://localhost:5005/addFav`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    const res = await fetch(
+      `https://corsanywhere.herokuapp.com/https://feadmeapp-examen-project.herokuapp.com/addFav`,
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     const data = await res.json();
     console.log(data);
     let result = data.data;
