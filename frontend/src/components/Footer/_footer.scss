@@ -36,6 +36,7 @@ aside {
 //// contact, API, about, cookies, antonia
 .main {
   @include main;
+  margin-bottom: 10rem;
 
   overflow: scroll;
 
