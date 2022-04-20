@@ -45,7 +45,11 @@ const Navbar = ({ logedin, setLogedin }) => {
             </NavLink>
           </li>
         )}
-        {logedin && <button onClick={logout}>logout</button>}
+        {logedin && (
+          <NavLink className="nav-links" to="/login">
+            <button onClick={logout}>logout</button>
+          </NavLink>
+        )}
       </ul>
     </nav>
   );
