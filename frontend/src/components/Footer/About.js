@@ -60,7 +60,7 @@ const About = () => {
             >
               {" "}
               <FaGithub />
-               Githug
+               Github
             </a>
           </li>
           <li>
