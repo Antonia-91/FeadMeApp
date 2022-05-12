@@ -57,12 +57,12 @@ const Login = ({ setUser, user }) => {
       <form className="login-form" onSubmit={save}>
         <input
           type="text"
-          placeholder="userName"
+          placeholder="type test"
           onChange={(e) => setUserName(e.target.value)}
         />
         <input
           type="password"
-          placeholder="password"
+          placeholder="type test123"
           onChange={(e) => setPassword(e.target.value)}
         />
         <button> Loggin </button>
